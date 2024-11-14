@@ -38,7 +38,7 @@ public class Main {
     }
 
     public static String start() {
-        if (!isProgramStopped) {
+        if (!isProgramStarted) {
             for (int i = 1; i < numOfVendors + 1; i++) {
                 Vendor vendor = new Vendor(i, ticketsReleaseRate, ticketPool);
                 Thread thread = new Thread(vendor);
@@ -53,7 +53,7 @@ public class Main {
                 thread.start(); // This will call the run() method.
             }
 
-            isProgramStopped = true;
+            isProgramStarted = true;
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
             try {
@@ -136,17 +136,16 @@ public class Main {
         }
     }
 
-    public static void stop() {
+    public static String stop() {
         isProgramStopped = true;
+        isProgramStarted = false;
         logger.info("Program stopped.");
         logger.info("Total number of selled tickets. " + ticketPool.getTotalNumberOfTickets());
 
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            logger.warning("Thread sleep was interrupted: " + e.getMessage());
-            Thread.currentThread().interrupt(); // Restore interrupted status
-        }
-
+        customers.clear();
+        vendors.clear();
+        
+        System.out.println("Stop method started");
+        return "Stopped";
     }
 }

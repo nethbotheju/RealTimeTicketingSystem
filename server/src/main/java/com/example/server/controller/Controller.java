@@ -13,10 +13,14 @@ public class Controller {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
     public String start() {
-        if(!Main.isProgramStarted) {
-            String result = Main.start();
-            return result;
-        }
-        return null;
+        String result = Main.start();
+        return result;
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/stop")
+    public String stop() {
+        String result = Main.stop();
+        return result;
     }
 }

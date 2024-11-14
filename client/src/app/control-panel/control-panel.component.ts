@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StartService } from './start-service.service';
+import { StopService } from './stop-service.service';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 
@@ -32,10 +33,13 @@ export class ControlPanelComponent {
     console.log('Vendor added successfully.');
   }
 
-  constructor(private myService: StartService) {}
+  constructor(
+    private startService: StartService,
+    private stopService: StopService
+  ) {}
 
   start() {
-    this.myService
+    this.startService
       .startFuntion()
       .pipe(
         map((response) => response) // No need to parse the response
@@ -47,6 +51,16 @@ export class ControlPanelComponent {
       });
     this.isStartted = true;
     this.isStopped = false;
-    console.log(this.customers);
+  }
+
+  stop() {
+    this.stopService.stopFuntion().subscribe((response) => {
+      console.log(response);
+      this.vendors = [];
+      this.customers = [];
+    });
+
+    this.isStartted = false;
+    this.isStopped = true;
   }
 }

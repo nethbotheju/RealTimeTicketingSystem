@@ -2128,3 +2128,1773 @@ Nov 14, 2024 5:48:53 PM com.example.server.model.Vendor run
 INFO: Program stopped. So vendor 2 stopped.
 Nov 14, 2024 5:48:53 PM com.example.server.model.Vendor run
 INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 5:55:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:01:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:01:38 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:02:15 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:02:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:13:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:14:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:14:08 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:14:08 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 4
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:14:43 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:14:43 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:14:43 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:14:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:14:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:14:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:14:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:14:51 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:14:51 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 4
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:15:25 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:15:26 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:15:27 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:15:27 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 4
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:16:12 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:16:13 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:16:16 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:16:16 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 4
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:19:10 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:19:10 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:19:11 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:19:11 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:19:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:19:14 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:19:14 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:19:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:19:16 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:19:21 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:19:21 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:19:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:19:24 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:19:34 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:19:34 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:19:40 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:19:40 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:21:56 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:21:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:21:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:23:05 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 8
+Nov 14, 2024 8:23:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:23:05 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:42 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:43 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:26:44 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 16
+Nov 14, 2024 8:26:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:26:44 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:36 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:28:37 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:28:37 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:28:37 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:28:47 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:28:51 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:28:51 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:49 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:34:50 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:34:50 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:34:50 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:34:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:34:55 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:34:55 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:35:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:35:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:35:04 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:35:04 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:35:44 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:35:44 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 8
+Nov 14, 2024 8:35:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:35:44 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:35:45 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:35:45 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:35:45 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:35:45 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:36:32 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:36:33 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:36:33 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 8
+Nov 14, 2024 8:36:35 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:36:35 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:36:36 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:36:36 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 8
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:47 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:36:48 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:36:48 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 8
+Nov 14, 2024 8:36:48 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:36:48 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:36:48 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:36:48 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:06 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:06 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:06 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:06 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:07 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:09 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:10 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:10 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:13 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:13 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:15 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:15 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:17 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:17 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:19 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:19 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:28 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:28 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:30 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:38:30 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:38:37 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:37 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:54 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:55 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:38:56 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:38:56 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:38:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:38:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:38:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:38:56 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:39:03 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:39:08 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:39:08 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 20
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:52 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:39:53 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:39:53 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 12
+Nov 14, 2024 8:39:53 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:39:53 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:39:54 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:39:55 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:00 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:01 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:02 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:03 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:04 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:05 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:06 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:07 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:08 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:09 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Nov 14, 2024 8:45:10 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:10 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:10 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:12 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:13 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:13 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:14 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:14 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:16 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:16 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:17 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:17 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:19 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:19 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:20 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:20 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:22 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:22 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:23 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:23 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:24 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:24 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
+Nov 14, 2024 8:45:25 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 3 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 1 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 4 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 2 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 4 stopped.
+Nov 14, 2024 8:45:25 PM com.example.server.model.Customer run
+INFO: Program stopped. So customer 3 stopped.
+Nov 14, 2024 8:45:26 PM com.example.server.Main stop
+INFO: Program stopped.
+Nov 14, 2024 8:45:26 PM com.example.server.Main stop
+INFO: Total number of selled tickets. 80
