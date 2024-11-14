@@ -28,4 +28,10 @@ public class Controller {
         return result;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping("/addCustomer/{priority}")
+    public String addc(@PathVariable("priority") int priority) {
+        String result = Main.addCustomer(priority);
+        return result;
+    }
 }

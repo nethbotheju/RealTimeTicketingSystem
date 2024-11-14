@@ -143,7 +143,7 @@ public class Main {
         return null;
     }
 
-    public static void addCustomer(int priority) {
+    public static String addCustomer(int priority) {
         // in the frontend the add buttons should be disabled
         if(!isProgramStopped){
             Customer customer = new Customer(latestCustomerId, customerRetrivalRate, ticketPool, priority);
@@ -153,7 +153,25 @@ public class Main {
             logger.info("Customer " + latestCustomerId + " successfully added to the customer list.");
             latestCustomerId++;
             thread.start(); // This will call the run() method.
+
+            // Create an ObjectMapper to serialize the objects to JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                // Create a map to hold both lists
+                Map<String, Object> resultMap = new HashMap<>();
+                resultMap.put("customers", customers);
+
+                // Convert the map to JSON
+                String jsonResult = objectMapper.writeValueAsString(resultMap);
+
+                return jsonResult; // Return the JSON string
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "{}"; // Return empty JSON in case of an error
+            }
         }
+        return null;
     }
 
     public static void stop() {

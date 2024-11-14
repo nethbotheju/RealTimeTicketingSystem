@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { StartService } from './start-service.service';
 import { StopService } from './stop-service.service';
 import { AddVendorService } from './addVendor.service';
+import { AddCustomerService } from './addCustomer.service';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 
@@ -27,7 +28,22 @@ export class ControlPanelComponent {
   }
 
   addc(priority: string) {
-    console.log('Customer added. Priority: ' + priority);
+    // Convert priority to a number before passing it to the service function
+    const priorityNumber = parseInt(priority, 10);
+
+    this.addCustomerService.addCustomerFunction(priorityNumber).subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.customers) {
+          this.customers = response.customers;
+        } else {
+          console.error('Invalid response:', response);
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
   }
 
   addv() {
@@ -49,7 +65,8 @@ export class ControlPanelComponent {
   constructor(
     private startService: StartService,
     private stopService: StopService,
-    private addVendorService: AddVendorService
+    private addVendorService: AddVendorService,
+    private addCustomerService: AddCustomerService
   ) {}
 
   start() {
