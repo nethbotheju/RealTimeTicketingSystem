@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StartService } from './start-service.service';
 import { StopService } from './stop-service.service';
+import { AddVendorService } from './addVendor.service';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 
@@ -30,12 +31,25 @@ export class ControlPanelComponent {
   }
 
   addv() {
-    console.log('Vendor added successfully.');
+    this.addVendorService.addVendorFuntion().subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.vendors) {
+          this.vendors = response.vendors;
+        } else {
+          console.error('Invalid response:', response);
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
   }
 
   constructor(
     private startService: StartService,
-    private stopService: StopService
+    private stopService: StopService,
+    private addVendorService: AddVendorService
   ) {}
 
   start() {

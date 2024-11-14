@@ -20,7 +20,14 @@ public class Controller {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/stop")
     public String stop() {
-        String result = Main.stop();
+        Main.stop();
+        return "Stopped";
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/addVendor")
+    public String addv() {
+        String result = Main.addVendor();
         return result;
     }
 }
