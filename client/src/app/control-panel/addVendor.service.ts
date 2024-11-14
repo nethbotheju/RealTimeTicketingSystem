@@ -9,6 +9,7 @@ export class AddVendorService {
   constructor(private http: HttpClient) {}
 
   addVendorFuntion(): Observable<{ vendors: any[] }> {
-    return this.http.get<{ vendors: any[] }>(this.apiUrl);
+    // Adding an empty object `{}` as the body of the POST request
+    return this.http.post<{ vendors: any[] }>(this.apiUrl, {});
   }
 }
