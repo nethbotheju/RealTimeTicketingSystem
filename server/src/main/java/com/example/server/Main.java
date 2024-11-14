@@ -78,7 +78,7 @@ public class Main {
         return null;
     }
 
-    public static void removeVendor(int vendorId) {
+    public static String removeVendor(int vendorId) {
         // in the frontend the remove buttons should be disabled
         if(!isProgramStopped){
             Iterator<Vendor> iterator = vendors.iterator();
@@ -89,10 +89,28 @@ public class Main {
                     iterator.remove();
                     numOfVendors--;
                     logger.info("Vendor " + vendorId + " successfully removed from the vendors list.");
-                    break; // Exit the loop once the vendor is found and removed
+                    break;
                 }
             }
+
+            // Create an ObjectMapper to serialize the objects to JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                // Create a map to hold both lists
+                Map<String, Object> resultMap = new HashMap<>();
+                resultMap.put("vendors", vendors);
+
+                // Convert the map to JSON
+                String jsonResult = objectMapper.writeValueAsString(resultMap);
+
+                return jsonResult; // Return the JSON string
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "{}"; // Return empty JSON in case of an error
+            }
         }
+        return null;
     }
 
     public static void removeCustomer(int customerId) {
