@@ -4,6 +4,7 @@ import { StopService } from './stop-service.service';
 import { AddVendorService } from './addVendor.service';
 import { AddCustomerService } from './addCustomer.service';
 import { RemoveVendorService } from './removeVendor.service';
+import { RemoveCustomerService } from './removeCustomer.service';
 import { map } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 
@@ -37,7 +38,19 @@ export class ControlPanelComponent {
   }
 
   stopc(id: number) {
-    console.log('Customer ' + id);
+    this.removeCustomerService.removeCustomerFunction(id).subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.customers) {
+          this.customers = response.customers;
+        } else {
+          console.error('Invalid response:', response);
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
   }
 
   addc(priority: string) {
@@ -80,7 +93,8 @@ export class ControlPanelComponent {
     private stopService: StopService,
     private addVendorService: AddVendorService,
     private addCustomerService: AddCustomerService,
-    private removeVendorService: RemoveVendorService
+    private removeVendorService: RemoveVendorService,
+    private removeCustomerService: RemoveCustomerService
   ) {}
 
   start() {

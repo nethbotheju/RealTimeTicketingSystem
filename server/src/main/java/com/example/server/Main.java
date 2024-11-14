@@ -9,11 +9,13 @@ import com.example.server.model.TicketPool;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final List<Vendor> vendors = new ArrayList<>();
-    private static final List<Customer> customers = new ArrayList<>();
+    private static final ConcurrentLinkedQueue<Vendor> vendors = new ConcurrentLinkedQueue<>();
+    private static final ConcurrentLinkedQueue<Customer> customers = new ConcurrentLinkedQueue<>();
     public static boolean isProgramStopped = false;
     public static boolean isProgramStarted = false;
 
@@ -113,7 +115,7 @@ public class Main {
         return null;
     }
 
-    public static void removeCustomer(int customerId) {
+    public static String removeCustomer(int customerId) {
         // in the frontend the remove buttons should be disabled
         if(!isProgramStopped){
             Iterator<Customer> iterator = customers.iterator();
@@ -127,7 +129,25 @@ public class Main {
                     break; // Exit the loop once the vendor is found and removed
                 }
             }
+
+            // Create an ObjectMapper to serialize the objects to JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                // Create a map to hold both lists
+                Map<String, Object> resultMap = new HashMap<>();
+                resultMap.put("customers", customers);
+
+                // Convert the map to JSON
+                String jsonResult = objectMapper.writeValueAsString(resultMap);
+
+                return jsonResult; // Return the JSON string
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "{}"; // Return empty JSON in case of an error
+            }
         }
+        return null;
     }
 
     public static String addVendor() {

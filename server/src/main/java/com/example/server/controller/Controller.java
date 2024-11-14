@@ -41,4 +41,11 @@ public class Controller {
         String result = Main.removeVendor(id);
         return result;
     }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @DeleteMapping("/removeCustomer/{id}")
+    public String removeCustomer(@PathVariable int id) {
+        String result = Main.removeCustomer(id);
+        return result;
+    }
 }
