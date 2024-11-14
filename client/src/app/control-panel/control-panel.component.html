@@ -1,0 +1,100 @@
+<div class="border-black border-2 w-[630px] rounded-3xl h-[423px] p-5 m-5">
+  <div class="flex justify-between items-center">
+    <h1 class="text-[28px] pl-2.5">Control Panel</h1>
+    <div
+      class="w-[324px] bg-slate-300 rounded-[32px] h-[49px] pl-5 pr-5 text-white flex justify-between items-center"
+    >
+      <button
+        class="w-[72px] bg-green-500 p-1 rounded-[32px] h-9"
+        (click)="start()"
+        [disabled]="isStartted"
+      >
+        Start
+      </button>
+      <button
+        class="w-[72px] bg-red-500 p-1 rounded-[32px] h-9"
+        [disabled]="isStopped"
+      >
+        Stop
+      </button>
+      <button class="w-[72px] bg-yellow-500 p-1 rounded-[32px] h-9">
+        Restart
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-9 flex justify-center gap-[64px]">
+    <div>
+      <div class="w-[243px] bg-slate-300 h-[270px] rounded-3xl p-[18px]">
+        <h1 class="text-[27px]">Vendor</h1>
+        <!-- Use *ngIf to check if vendors exist and have items -->
+        <div
+          *ngIf="vendors && vendors.length > 0"
+          class="w-[198px] mt-3.5 pl-1 h-[162px] overflow-y-auto custom-scrollbar"
+        >
+          <!-- Use *ngFor to loop over vendors -->
+          <div *ngFor="let vendor of vendors" class="flex justify-between h-11">
+            <h3 class="text-[19px]">Vendor {{ vendor.vendorId }}</h3>
+            <img
+              src="stop-button.png"
+              class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
+              (click)="stopv(vendor.id)"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-black w-[243px] mt-[-20px] h-[38px] flex justify-end items-center"
+      >
+        <button
+          class="bg-white to-black w-[99px] rounded-xl mr-3"
+          (click)="addv()"
+        >
+          Add Vendor
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="w-[243px] bg-slate-300 h-[270px] rounded-3xl p-[18px]">
+        <h1 class="text-[27px]">Customer</h1>
+        <!-- Use *ngIf to check if customers exist and have items -->
+        <div
+          *ngIf="customers && customers.length > 0"
+          class="w-[198px] mt-3.5 pl-1 h-[162px] overflow-y-auto custom-scrollbar"
+        >
+          <!-- Use *ngFor to loop over customers -->
+          <div
+            *ngFor="let customer of customers"
+            class="flex justify-between h-11"
+          >
+            <h3 class="text-[19px]">Customer {{ customer.customerId }}</h3>
+            <img
+              src="stop-button.png"
+              class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
+              (click)="stopc(customer.id)"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-black w-[243px] mt-[-20px] h-[38px] flex justify-end items-center"
+      >
+        <label for="priority" class="text-white mr-2 text-[17px]"
+          >Priority</label
+        >
+        <select id="priority" #priority class="mr-5 rounded-md">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+        </select>
+        <button
+          class="bg-white to-black w-[113px] rounded-lg mr-2 text-[16px]"
+          (click)="addc(priority.value)"
+        >
+          Add Customer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

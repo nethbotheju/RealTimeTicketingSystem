@@ -1,0 +1,49 @@
+<table class="w-[800px] divide-y divide-gray-200">
+  <thead class="bg-gray-50">
+    <tr>
+      <th
+        class="px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider w-[206px] h-[44px]"
+      >
+        DATE & TIME
+      </th>
+      <th
+        class="px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider w-[110px] h-[44px]"
+      >
+        STATUS
+      </th>
+      <th
+        class="px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider h-[44px]"
+      >
+        MESSAGE
+      </th>
+    </tr>
+  </thead>
+</table>
+
+<!-- Scrollable container for table body -->
+<div class="overflow-y-auto h-[285px] w-[800px]">
+  <table class="w-full divide-y divide-gray-200">
+    <tbody class="bg-white divide-y divide-gray-200">
+      <ng-container *ngFor="let log of logs; let i = index">
+        <tr class="hover:bg-gray-100 h-[40px]">
+          <td class="px-6 py-4 whitespace-nowrap w-[150px]">
+            {{ log.timestamp }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap w-[110px]">
+            <ng-container *ngIf="log.level === 'Error'">
+              <span class="text-red-500">{{ log.level }}</span>
+            </ng-container>
+            <ng-container *ngIf="log.level === 'Warning'">
+              <span class="text-yellow-500">{{ log.level }}</span>
+            </ng-container>
+            <ng-container *ngIf="log.level === 'Success'">
+              <span class="text-green-500">{{ log.level }}</span>
+            </ng-container>
+          </td>
+
+          <td class="px-6 py-4 whitespace-nowrap">{{ log.message }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
