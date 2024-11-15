@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StartService } from './start-service.service';
 import { StopService } from './stop-service.service';
 import { AddVendorService } from './addVendor.service';
 import { AddCustomerService } from './addCustomer.service';
 import { RemoveVendorService } from './removeVendor.service';
 import { RemoveCustomerService } from './removeCustomer.service';
-import { map } from 'rxjs/operators';
+import { WebSocketService } from './web-socket.service';
+import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,80 +14,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './control-panel.component.html',
-  styleUrl: './control-panel.component.css',
+  styleUrls: ['./control-panel.component.css'],
 })
-export class ControlPanelComponent {
+export class ControlPanelComponent implements OnInit {
   vendors: any[] = [];
   customers: any[] = [];
-  isStartted: boolean = false;
+  isStarted: boolean = false;
   isStopped: boolean = true;
-
-  stopv(id: number) {
-    this.removeVendorService.removeVendorFunction(id).subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response && response.vendors) {
-          this.vendors = response.vendors;
-        } else {
-          console.error('Invalid response:', response);
-        }
-      },
-      error: (error) => {
-        console.error('Error occurred:', error);
-      },
-    });
-  }
-
-  stopc(id: number) {
-    this.removeCustomerService.removeCustomerFunction(id).subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response && response.customers) {
-          this.customers = response.customers;
-        } else {
-          console.error('Invalid response:', response);
-        }
-      },
-      error: (error) => {
-        console.error('Error occurred:', error);
-      },
-    });
-  }
-
-  addc(priority: string) {
-    // Convert priority to a number before passing it to the service function
-    const priorityNumber = parseInt(priority, 10);
-
-    this.addCustomerService.addCustomerFunction(priorityNumber).subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response && response.customers) {
-          this.customers = response.customers;
-        } else {
-          console.error('Invalid response:', response);
-        }
-      },
-      error: (error) => {
-        console.error('Error occurred:', error);
-      },
-    });
-  }
-
-  addv() {
-    this.addVendorService.addVendorFuntion().subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response && response.vendors) {
-          this.vendors = response.vendors;
-        } else {
-          console.error('Invalid response:', response);
-        }
-      },
-      error: (error) => {
-        console.error('Error occurred:', error);
-      },
-    });
-  }
 
   constructor(
     private startService: StartService,
@@ -94,32 +28,125 @@ export class ControlPanelComponent {
     private addVendorService: AddVendorService,
     private addCustomerService: AddCustomerService,
     private removeVendorService: RemoveVendorService,
-    private removeCustomerService: RemoveCustomerService
+    private removeCustomerService: RemoveCustomerService,
+    private webSocketService: WebSocketService
   ) {}
 
-  start() {
-    this.startService
-      .startFuntion()
-      .pipe(
-        map((response) => response) // No need to parse the response
-      )
-      .subscribe((response) => {
+  ngOnInit(): void {
+    this.webSocketService.connect();
+    this.listenForUpdates();
+  }
+
+  // WebSocket listener to update vendors and customers dynamically
+  private listenForUpdates(): void {
+    this.webSocketService.getMessages().subscribe((message) => {
+      console.log('Received update from server:', message);
+      // Update the vendors/customers based on the message if needed
+      // You can implement custom logic to update vendors/customers based on the WebSocket message
+    });
+  }
+
+  // Start function
+  start(): void {
+    this.startService.startFuntion().subscribe({
+      next: (response) => {
         console.log(response);
-        this.vendors = response.vendors;
-        this.customers = response.customers;
-      });
-    this.isStartted = true;
+        if (response && response.vendors) {
+          this.vendors = response.vendors;
+        }
+        if (response && response.customers) {
+          this.customers = response.customers;
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
+
+    this.isStarted = true;
     this.isStopped = false;
   }
 
-  stop() {
-    this.stopService.stopFuntion().subscribe((response) => {
-      console.log(response);
-      this.vendors = [];
-      this.customers = [];
+  // Stop function
+  stop(): void {
+    this.stopService.stopFuntion().subscribe({
+      next: (response) => {
+        console.log(response);
+        this.vendors = [];
+        this.customers = [];
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
     });
 
-    this.isStartted = false;
+    this.isStarted = false;
     this.isStopped = true;
+  }
+
+  // Add Vendor
+  addv(): void {
+    this.addVendorService.addVendorFuntion().subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.vendors) {
+          this.vendors = response.vendors;
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
+  }
+
+  // Remove Vendor
+  stopv(id: number): void {
+    this.removeVendorService.removeVendorFunction(id).subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.vendors) {
+          this.vendors = response.vendors;
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
+  }
+
+  // Add Customer
+  addc(priority: string): void {
+    const priorityNumber = parseInt(priority, 10);
+    this.addCustomerService.addCustomerFunction(priorityNumber).subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.customers) {
+          this.customers = response.customers;
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
+  }
+
+  // Remove Customer
+  stopc(id: number): void {
+    this.removeCustomerService.removeCustomerFunction(id).subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response && response.customers) {
+          this.customers = response.customers;
+        }
+      },
+      error: (error) => {
+        console.error('Error occurred:', error);
+      },
+    });
+  }
+
+  // Cleanup on component destruction
+  ngOnDestroy(): void {
+    this.webSocketService.close();
   }
 }

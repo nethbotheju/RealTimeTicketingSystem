@@ -1,16 +1,27 @@
 package com.example.server.controller;
 
 import com.example.server.Main;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
 public class Controller {
 
+    private final SimpMessagingTemplate messagingTemplate;
+
+    public Controller(SimpMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
+
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
     public String start() {
         String result = Main.start();
+
+        // Send WebSocket message to clients connected to "/topic/updates"
+        messagingTemplate.convertAndSend("/topic/start/data", "Process started: " + result);
+
         return result;
     }
 
