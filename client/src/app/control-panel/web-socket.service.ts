@@ -7,7 +7,8 @@ import { Observable, Subject } from 'rxjs';
 })
 export class WebSocketService {
   private stompClient!: Client;
-  private messageSubject: Subject<string> = new Subject<string>();
+  private startMessageSubject: Subject<string> = new Subject<string>();
+  private stopMessageSubject: Subject<string> = new Subject<string>();
 
   constructor() {
     this.stompClient = new Client({
@@ -21,7 +22,13 @@ export class WebSocketService {
         // Subscribe to /topic/start/data to receive messages
         this.stompClient.subscribe('/topic/start/data', (message: IMessage) => {
           console.log('Update from server:', message.body);
-          this.messageSubject.next(message.body); // Emit message to subscribers
+          this.startMessageSubject.next(message.body); // Emit message to subscribers
+        });
+
+        // Subscribe to /topic/start/data to receive messages
+        this.stompClient.subscribe('/topic/stop/data', (message: IMessage) => {
+          console.log('Update from server:', message.body);
+          this.stopMessageSubject.next(message.body); // Emit message to subscribers
         });
       },
       onStompError: (frame) => {
@@ -46,7 +53,11 @@ export class WebSocketService {
   }
 
   // Observable to listen for messages from the server
-  getMessages(): Observable<string> {
-    return this.messageSubject.asObservable();
+  getStartMessages(): Observable<string> {
+    return this.startMessageSubject.asObservable();
+  }
+
+  getStopMessages(): Observable<string> {
+    return this.stopMessageSubject.asObservable();
   }
 }

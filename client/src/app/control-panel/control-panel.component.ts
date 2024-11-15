@@ -38,7 +38,7 @@ export class ControlPanelComponent implements OnInit {
 
   // WebSocket listener to update vendors and customers dynamically
   private listenForUpdates(): void {
-    this.webSocketService.getMessages().subscribe((message) => {
+    this.webSocketService.getStartMessages().subscribe((message) => {
       console.log('Received update from server:', message);
       // Parse the message
       const parsedMessage = JSON.parse(message);
@@ -50,16 +50,25 @@ export class ControlPanelComponent implements OnInit {
       this.isStarted = true;
       this.isStopped = false;
     });
+
+    this.webSocketService.getStopMessages().subscribe((message) => {
+      console.log('Recive message from stop: ' + message);
+      this.vendors = [];
+      this.customers = [];
+      this.isStarted = false;
+      this.isStopped = true;
+    });
   }
 
   // Start function
   start(): void {
     this.startService.startFuntion().subscribe((response) => {
       console.log(response);
+      if (response) {
+        this.isStarted = true;
+        this.isStopped = false;
+      }
     });
-
-    this.isStarted = true;
-    this.isStopped = false;
   }
 
   // Stop function
@@ -67,16 +76,11 @@ export class ControlPanelComponent implements OnInit {
     this.stopService.stopFuntion().subscribe({
       next: (response) => {
         console.log(response);
-        this.vendors = [];
-        this.customers = [];
       },
       error: (error) => {
         console.error('Error occurred:', error);
       },
     });
-
-    this.isStarted = false;
-    this.isStopped = true;
   }
 
   // Add Vendor

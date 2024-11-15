@@ -16,19 +16,23 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
-    public String start() {
+    public Boolean start() {
         String result = Main.start();
+
 
         // Send WebSocket message to clients connected to "/topic/updates"
         messagingTemplate.convertAndSend("/topic/start/data", result);
 
-        return "true";
+        return true;
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/stop")
     public String stop() {
         Main.stop();
+
+        messagingTemplate.convertAndSend("/topic/stop/data", "Stopped");
+
         return "Stopped";
     }
 

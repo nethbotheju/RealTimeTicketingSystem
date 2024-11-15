@@ -8,7 +8,7 @@ export class StartService {
 
   constructor(private http: HttpClient) {}
 
-  startFuntion(): Observable<string> {
-    return this.http.get<string>(this.apiUrl);
+  startFuntion(): Observable<boolean> {
+    return this.http.get<boolean>(this.apiUrl);
   }
 }
