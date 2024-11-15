@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { timestamp } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { LogWebSocket } from './log.service';
 
 @Component({
   selector: 'app-log-table-view',
@@ -9,66 +10,26 @@ import { CommonModule } from '@angular/common';
   templateUrl: './log-table-view.component.html',
   styleUrl: './log-table-view.component.css',
 })
-export class LogTableViewComponent {
-  logs = [
-    {
-      level: 'Error',
-      message: 'Failed to load resource',
-      timestamp: '2024-12-03 10:15:30',
-    },
-    {
-      level: 'Warning',
-      message: 'Deprecated API usage',
-      timestamp: '2024-12-03 11:20:45',
-    },
-    {
-      level: 'Success',
-      message: 'User successfully logged in',
-      timestamp: '2024-12-03 12:30:00',
-    },
-    {
-      level: 'Error',
-      message: 'Unhandled exception occurred',
-      timestamp: '2024-12-03 13:45:15',
-    },
-    {
-      level: 'Warning',
-      message: 'Low disk space',
-      timestamp: '2024-12-03 14:50:20',
-    },
-    {
-      level: 'Success',
-      message: 'Data saved successfully',
-      timestamp: '2024-12-03 15:55:25',
-    },
-    {
-      level: 'Success',
-      message: 'User successfully logged in',
-      timestamp: '2024-12-03 12:30:00',
-    },
-    {
-      level: 'Error',
-      message: 'Unhandled exception occurred',
-      timestamp: '2024-12-03 13:45:15',
-    },
-    {
-      level: 'Warning',
-      message: 'Low disk space',
-      timestamp: '2024-12-03 14:50:20',
-    },
-    {
-      level: 'Success',
-      message: 'Data saved successfully',
-      timestamp: '2024-12-03 15:55:25',
-    },
-  ];
+export class LogTableViewComponent implements OnInit {
+  logs: any[] = [];
 
-  add() {
-    // unshift will add to beginning of the array
-    this.logs.unshift({
-      level: 'Success',
-      message: 'First added',
-      timestamp: '2024-12-03 15:55:25',
+  constructor(private logWebSocket: LogWebSocket) {}
+
+  ngOnInit(): void {
+    this.logWebSocket.connect();
+    this.add();
+  }
+
+  private add(): void {
+    this.logWebSocket.getLogMessages().subscribe((message) => {
+      console.log('Received update from server:', message);
+
+      const parsedMessage = JSON.parse(message);
+      this.logs.unshift({
+        level: parsedMessage.level,
+        message: parsedMessage.message,
+        timestamp: parsedMessage.timestamp,
+      });
     });
   }
 }

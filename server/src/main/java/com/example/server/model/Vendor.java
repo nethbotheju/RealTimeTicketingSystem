@@ -5,6 +5,7 @@ import com.example.server.config.LogConfig;
 import com.example.server.controller.LogController;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
@@ -13,6 +14,9 @@ public class Vendor implements Runnable {
     private final int ticketsReleaseRate;
     private final int vendorId;
     private boolean isVendorStopped;
+
+
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     private static final Logger logger = LogConfig.logger;
     private final ReentrantLock lock = new ReentrantLock();
@@ -33,7 +37,7 @@ public class Vendor implements Runnable {
                     if (Main.isProgramStopped) {
                         String message = "Program stopped. So vendor " + vendorId + " stopped.";
                         logger.info(message);
-                        LogController.publishLog(new LogEntry("Success", message, LocalDateTime.now().toString()));
+                        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
                         Thread.currentThread().interrupt();
                         break;
@@ -42,7 +46,7 @@ public class Vendor implements Runnable {
                     if (isVendorStopped) {
                         String message = "Vendor " + vendorId + " stopped successfully.";
                         logger.info(message);
-                        LogController.publishLog(new LogEntry("Success", message, LocalDateTime.now().toString()));
+                        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
                         Thread.currentThread().interrupt();
                         break;
@@ -51,7 +55,7 @@ public class Vendor implements Runnable {
                     if (ticketPool.getTotalNumberOfTickets() >= ticketPool.maxTicketCapacity) {
                         String message = "Total number of tickets released has reached the limit for Vendor " + vendorId + ". Stopping further releases.";
                         logger.info(message);
-                        LogController.publishLog(new LogEntry("Warning", message, LocalDateTime.now().toString()));
+                        LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
 
                         Thread.currentThread().interrupt();
                         break;

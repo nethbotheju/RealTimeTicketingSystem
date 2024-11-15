@@ -63,4 +63,8 @@ public class Controller {
         String result = Main.removeCustomer(id);
         return result;
     }
+
+    public void sendToFrontendLog(String message) {
+        messagingTemplate.convertAndSend("/topic/log", message);
+    }
 }

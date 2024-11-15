@@ -4,6 +4,7 @@ import com.example.server.config.LogConfig;
 import com.example.server.config.SQLiteDatabaseSetup;
 import com.example.server.controller.LogController;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -21,6 +22,8 @@ public class TicketPool {
     public  int totalNumberOfTickets;
     public final List<Ticket> tickets = Collections.synchronizedList(new ArrayList<>());
     private final List<Customer> waitingCustomers = Collections.synchronizedList(new ArrayList<>());
+
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     private final ReentrantLock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
@@ -45,7 +48,7 @@ public class TicketPool {
 
             String message = "Vendor " + ticket.getVendorId() + " successfully added a ticket to the TicketPool.";
             logger.info(message);
-            LogController.publishLog(new LogEntry("Success", message, LocalDateTime.now().toString()));
+            LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
 
             notEmpty.signalAll(); // Signal that tickets are available
@@ -67,7 +70,7 @@ public class TicketPool {
 
             String message = "Customer " + customer.getCustomerId() + " successfully removed a ticket from the TicketPool.";
             logger.info(message); // logging file
-            LogController.publishLog(new LogEntry("Success", message, LocalDateTime.now().toString())); // real time send to frontend
+            LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter))); // real time send to frontend
 
             waitingCustomers.remove(customer);
             notFull.signalAll(); // Signal that there is space for more tickets
