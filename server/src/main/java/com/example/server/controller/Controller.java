@@ -20,9 +20,9 @@ public class Controller {
         String result = Main.start();
 
         // Send WebSocket message to clients connected to "/topic/updates"
-        messagingTemplate.convertAndSend("/topic/start/data", "Process started: " + result);
+        messagingTemplate.convertAndSend("/topic/start/data", result);
 
-        return result;
+        return "true";
     }
 
     @CrossOrigin(origins = "http://localhost:4200")

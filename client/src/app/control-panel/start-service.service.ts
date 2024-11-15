@@ -8,7 +8,7 @@ export class StartService {
 
   constructor(private http: HttpClient) {}
 
-  startFuntion(): Observable<{ vendors: any[]; customers: any[] }> {
-    return this.http.get<{ vendors: any[]; customers: any[] }>(this.apiUrl);
+  startFuntion(): Observable<string> {
+    return this.http.get<string>(this.apiUrl);
   }
 }

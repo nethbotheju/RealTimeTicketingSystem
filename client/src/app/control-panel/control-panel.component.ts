@@ -6,7 +6,6 @@ import { AddCustomerService } from './addCustomer.service';
 import { RemoveVendorService } from './removeVendor.service';
 import { RemoveCustomerService } from './removeCustomer.service';
 import { WebSocketService } from './web-socket.service';
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -41,26 +40,22 @@ export class ControlPanelComponent implements OnInit {
   private listenForUpdates(): void {
     this.webSocketService.getMessages().subscribe((message) => {
       console.log('Received update from server:', message);
-      // Update the vendors/customers based on the message if needed
-      // You can implement custom logic to update vendors/customers based on the WebSocket message
+      // Parse the message
+      const parsedMessage = JSON.parse(message);
+
+      // Extract customers and vendors arrays
+      this.customers = parsedMessage.customers;
+      this.vendors = parsedMessage.vendors;
+
+      this.isStarted = true;
+      this.isStopped = false;
     });
   }
 
   // Start function
   start(): void {
-    this.startService.startFuntion().subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response && response.vendors) {
-          this.vendors = response.vendors;
-        }
-        if (response && response.customers) {
-          this.customers = response.customers;
-        }
-      },
-      error: (error) => {
-        console.error('Error occurred:', error);
-      },
+    this.startService.startFuntion().subscribe((response) => {
+      console.log(response);
     });
 
     this.isStarted = true;

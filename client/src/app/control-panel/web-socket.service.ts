@@ -38,14 +38,6 @@ export class WebSocketService {
     this.stompClient.activate();
   }
 
-  // Method to send messages to the server
-  sendMessage(message: any): void {
-    this.stompClient.publish({
-      destination: '/app/message', // Adjust the destination if needed
-      body: JSON.stringify(message),
-    });
-  }
-
   // Method to close the WebSocket connection
   close(): void {
     if (this.stompClient) {
