@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './ticket-details.component.html',
-  styleUrl: './ticket-details.component.css'
+  styleUrl: './ticket-details.component.css',
 })
 export class TicketDetailsComponent {
-
+  noOfTickets = 50;
 }
