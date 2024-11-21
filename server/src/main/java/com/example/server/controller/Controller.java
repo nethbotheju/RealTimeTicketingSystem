@@ -1,8 +1,12 @@
 package com.example.server.controller;
 
 import com.example.server.Main;
+import com.example.server.model.ConfigTasks;
+import org.json.simple.parser.ParseException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.FileNotFoundException;
 
 @RestController
 @RequestMapping("/api")
@@ -62,6 +66,20 @@ public class Controller {
     public String removeCustomer(@PathVariable int id) {
         String result = Main.removeCustomer(id);
         return result;
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/loadConfig")
+    public String returnConfigFrontend() throws FileNotFoundException {
+
+        return ConfigTasks.loadConfigFrontend();
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping("/updateConfig/")
+    public String updateConfigFrontend(@RequestBody String jsonString) throws ParseException {
+        ConfigTasks.updateConfig(jsonString);
+        return "Updated SuccessFully";
     }
 
     public void sendToFrontendLog(String message) {

@@ -1,0 +1,75 @@
+package com.example.server.model;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ConfigTasks {
+
+    public static void updateConfig(String response) throws ParseException {
+        JSONParser parser = new JSONParser();
+
+        JSONObject jsonObject = (JSONObject) parser.parse(response);
+
+        int maxTicketCapacity = ((Long) jsonObject.get("maxTicketCapacity")).intValue();
+        int totalNumberOfTickets = ((Long) jsonObject.get("totalNumberOfTickets")).intValue();
+        int ticketRetrivalRate = ((Long) jsonObject.get("ticketRetrivalRate")).intValue();
+        int ticketReleaseRate = ((Long) jsonObject.get("ticketReleaseRate")).intValue();
+        int numOfVendors = ((Long) jsonObject.get("numOfVendors")).intValue();
+        int numOfCustomers = ((Long) jsonObject.get("numOfCustomers")).intValue();
+
+
+        JSONArray Customers = (JSONArray) jsonObject.get("Customers");
+        ConfigCustomer[] listOfCustomers = new ConfigCustomer[Customers.size()];
+        for (int i = 0; i < Customers.size(); i++) {
+            JSONObject customer = (JSONObject) Customers.get(i);
+            int id = ((Long) customer.get("id")).intValue();
+            int priority = ((Long) customer.get("priority")).intValue();
+            listOfCustomers[i] = new ConfigCustomer(id, priority);
+        }
+
+        ConfigVendor[] listOfVendors = new ConfigVendor[numOfVendors];
+        for (int i = 0; i < numOfVendors; i++) {
+            listOfVendors[i] = new ConfigVendor(i+1);
+        }
+
+
+        Configuration config = new Configuration(maxTicketCapacity, totalNumberOfTickets, ticketReleaseRate, ticketRetrivalRate, numOfVendors, numOfCustomers, listOfCustomers, listOfVendors);
+
+        // Save the Config object to a JSON file
+        try (FileWriter writer = new FileWriter("config.json")) {
+            Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
+            prettyGson.toJson(config, writer); // Serialize and write to file
+            System.out.println("JSON saved to config.json");
+        } catch (IOException e) {
+            System.err.println("Error saving JSON: " + e.getMessage());
+        }
+    }
+
+    public static Configuration loadConfigSystem() throws FileNotFoundException {
+        Gson gson = new Gson();
+        Configuration config = null;
+        try (FileReader reader = new FileReader("config.json")) {
+            config = gson.fromJson(reader, Configuration.class);
+            System.out.println("JSON loaded from config.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return config;
+    }
+
+    public static String loadConfigFrontend() throws FileNotFoundException {
+        Gson gson = new Gson();
+        Configuration config = loadConfigSystem();
+        return gson.toJson(config);
+    }
+}
+

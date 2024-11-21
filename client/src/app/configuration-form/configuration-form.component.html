@@ -8,9 +8,9 @@
         >
         <input
           id="totalNumberOfTickets"
+          [(ngModel)]="totalNumberOfTickets"
           type="number"
           min="0"
-          value="10"
           class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
         />
       </div>
@@ -20,9 +20,9 @@
         >
         <input
           id="ticketReleaseRate"
+          [(ngModel)]="ticketReleaseRate"
           type="number"
           min="0"
-          value="10"
           class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
         />
       </div>
@@ -32,9 +32,9 @@
         >
         <input
           id="customerRetrivalRate"
+          [(ngModel)]="customerRetrivalRate"
           type="number"
           min="0"
-          value="10"
           class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
         />
       </div>
@@ -44,9 +44,9 @@
         >
         <input
           id="maximumTicketCapacity"
+          [(ngModel)]="maximumTicketCapacity"
           type="number"
           min="0"
-          value="10"
           class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
         />
       </div>
@@ -60,9 +60,9 @@
           >
           <input
             id="numOfVendors"
+            [(ngModel)]="numOfVendors"
             type="number"
             min="0"
-            value="10"
             class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
           />
         </div>
@@ -79,34 +79,32 @@
             class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
           />
         </div>
-        <div>
+        <div class="overflow-y-auto h-[142px] w-[272px]">
           <table class="bg-gray-50">
-            <tr>
-              <th class="w-[120px] border-2">CustomerId</th>
-              <th class="w-[150px] border-2">Priority</th>
-            </tr>
+            <thead>
+              <tr>
+                <th class="w-[120px] border-2">CustomerId</th>
+                <th class="w-[150px] border-2">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customer of customers">
+                <td class="border-2 text-center w-[120px]">
+                  {{ customer.id }}
+                </td>
+                <td class="border-2 w-[140px]">
+                  <select
+                    [(ngModel)]="customer.priority"
+                    class="bg-slate-300 w-[136px]"
+                  >
+                    <option value="3" selected>Low</option>
+                    <option value="2">Medium</option>
+                    <option value="1">High</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
           </table>
-          <div class="overflow-y-auto h-[142px] w-[272px]">
-            <table class="">
-              <tbody>
-                <tr *ngFor="let customer of customers">
-                  <td class="border-2 text-center w-[120px]">
-                    {{ customer.id }}
-                  </td>
-                  <td class="border-2 w-[140px]">
-                    <select
-                      [(ngModel)]="customer.priority"
-                      class="bg-slate-300 w-[136px]"
-                    >
-                      <option value="3" selected>Low</option>
-                      <option value="2">Medium</option>
-                      <option value="1">High</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
     </div>

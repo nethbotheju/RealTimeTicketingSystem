@@ -1,12 +1,10 @@
 package com.example.server;
 
 import com.example.server.config.LogConfig;
-import com.example.server.model.Configuration;
-import com.example.server.model.Vendor;
-import com.example.server.model.Customer;
-import com.example.server.model.TicketPool;
+import com.example.server.model.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.simple.parser.ParseException;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -36,7 +34,7 @@ public class Main {
 
     private static final Logger logger = LogConfig.logger;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
     }
 
     public static String start() {
