@@ -8,7 +8,7 @@
   "listOfVendors": [
     {
       "id": 1,
-      "isStopped": false,
+      "isStopped": true,
       "releasedTickets": 0
     },
     {

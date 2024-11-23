@@ -21,4 +21,20 @@ public class ConfigCustomer {
         this.isStopped = false;
         this.retrivalTickets = 0;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public boolean isStopped() {
+        return isStopped;
+    }
+
+    public int getRetrivalTickets() {
+        return retrivalTickets;
+    }
 }

@@ -6,6 +6,7 @@ import com.example.server.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -17,40 +18,59 @@ public class Main {
     public static boolean isProgramStopped = false;
     public static boolean isProgramStarted = false;
 
-    private static int maxTicketCapacity = 100;
-    private static int ticketsReleaseRate = 2;
-    private static int customerRetrivalRate = 3;
-    private static int totalNumberOfTickets = 0;
+    private static int maxTicketCapacity;
+    private static int ticketsReleaseRate;
+    private static int customerRetrivalRate;
+    private static int totalNumberOfTickets;
 
-    private static TicketPool ticketPool = new TicketPool(maxTicketCapacity, totalNumberOfTickets);
+    private static TicketPool ticketPool;
 
-    private static int numOfVendors = 4;
-    private static int numOfCustomers = 4;
-
-    private static int[] numOfCustomersPriority = new int[] {1, 2, 3, 1};
-
-    private static int latestVendorId = numOfVendors + 1;
-    private static int latestCustomerId = numOfCustomers + 1;
+    private static int numOfVendors;
+    private static int numOfCustomers;
 
     private static final Logger logger = LogConfig.logger;
+
+    private static Configuration config;
+
+    private static ConfigVendor[] listOfVendors;
+    private static ConfigCustomer[] listOfCustomers;
 
     public static void main(String[] args) throws ParseException {
     }
 
-    public static String start() {
+    public static String start() throws FileNotFoundException {
+
+        config = ConfigTasks.loadConfigSystem();
+
+        maxTicketCapacity = config.getMaxTicketCapacity();
+        totalNumberOfTickets = config.getTotalNumberOfTickets();
+        customerRetrivalRate = config.getTicketRetrivalRate();
+        ticketsReleaseRate = config.getTicketReleaseRate();
+        numOfCustomers = config.getNumOfCustomers();
+        numOfVendors = config.getNumOfVendors();
+
+        listOfVendors = config.getListOfVendors();
+        listOfCustomers = config.getListOfCustomers();
+
+        ticketPool = new TicketPool(maxTicketCapacity, totalNumberOfTickets);
+
         if (!isProgramStarted) {
-            for (int i = 1; i < numOfVendors + 1; i++) {
-                Vendor vendor = new Vendor(i, ticketsReleaseRate, ticketPool);
-                Thread thread = new Thread(vendor);
+            for (int i = 0; i < numOfVendors; i++) {
+                Vendor vendor = new Vendor(listOfVendors[i].getId(), ticketsReleaseRate, ticketPool, listOfVendors[i].isStopped(), listOfVendors[i].getReleasedTickets());
                 vendors.add(vendor);
-                thread.start(); // This will call the run() method.
+                if(!listOfVendors[i].isStopped()) {
+                    Thread thread = new Thread(vendor);
+                    thread.start(); // This will call the run() method.
+                }
             }
 
-            for (int j = 1; j < numOfCustomers + 1; j++) {
-                Customer customer = new Customer(j, customerRetrivalRate, ticketPool, numOfCustomersPriority[j - 1]);
-                Thread thread = new Thread(customer);
+            for (int j = 0; j < numOfCustomers; j++) {
+                Customer customer = new Customer(listOfCustomers[j].getId(), customerRetrivalRate, ticketPool, listOfCustomers[j].getPriority(), listOfCustomers[j].isStopped(), listOfCustomers[j].getRetrivalTickets() );
                 customers.add(customer);
-                thread.start(); // This will call the run() method.
+                if(!listOfCustomers[j].isStopped()) {
+                    Thread thread = new Thread(customer);
+                    thread.start(); // This will call the run() method.
+                }
             }
 
             isProgramStarted = true;
@@ -67,7 +87,7 @@ public class Main {
                 // Convert the map to JSON
                 String jsonResult = objectMapper.writeValueAsString(resultMap);
 
-                System.out.println("Start method started");
+                System.out.println("Start method started with result: " + jsonResult);
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
@@ -81,17 +101,15 @@ public class Main {
     public static String removeVendor(int vendorId) {
         // in the frontend the remove buttons should be disabled
         if(!isProgramStopped){
-            Iterator<Vendor> iterator = vendors.iterator();
-            while (iterator.hasNext()) {
-                Vendor vendor = iterator.next();
-                if (vendor.getVendorId() == vendorId) {
-                    vendor.setIsVendorStopped(true);
-                    iterator.remove();
-                    numOfVendors--;
+            for(Vendor v : vendors){
+                if (v.getVendorId() == vendorId) {
+                    v.setIsVendorStopped(true);
+
                     logger.info("Vendor " + vendorId + " successfully removed from the vendors list.");
                     break;
                 }
             }
+
 
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
@@ -116,15 +134,12 @@ public class Main {
     public static String removeCustomer(int customerId) {
         // in the frontend the remove buttons should be disabled
         if(!isProgramStopped){
-            Iterator<Customer> iterator = customers.iterator();
-            while (iterator.hasNext()) {
-                Customer customer = iterator.next();
-                if (customer.getCustomerId() == customerId) {
-                    customer.setIsCustomerStopped(true);
-                    iterator.remove();
-                    numOfCustomers--;
-                    logger.info("Customer " + customerId + " successfully removed from the customers list.");
-                    break; // Exit the loop once the vendor is found and removed
+            for(Customer c : customers){
+                if (c.getCustomerId() == customerId) {
+                    c.setIsCustomerStopped(true);
+
+                    logger.info("Customer " + customerId + " successfully stoped.");
+                    break;
                 }
             }
 
@@ -151,12 +166,13 @@ public class Main {
     public static String addVendor() {
         // in the frontend the add buttons should be disabled
         if(!isProgramStopped){
-            Vendor vendor = new Vendor(latestVendorId, ticketsReleaseRate, ticketPool);
+            int newVendorId = numOfVendors + 1;
+            Vendor vendor = new Vendor(newVendorId, ticketsReleaseRate, ticketPool, false, 0);
             Thread thread = new Thread(vendor);
             vendors.add(vendor);
-            numOfVendors++;
-            logger.info("Vendor " + latestVendorId + " successfully added to the vendor list.");
-            latestVendorId++;
+
+            logger.info("Vendor " + newVendorId + " successfully added to the vendor list.");
+            numOfVendors = newVendorId;
             thread.start(); // This will call the run() method.
 
             // Create an ObjectMapper to serialize the objects to JSON
@@ -182,12 +198,13 @@ public class Main {
     public static String addCustomer(int priority) {
         // in the frontend the add buttons should be disabled
         if(!isProgramStopped){
-            Customer customer = new Customer(latestCustomerId, customerRetrivalRate, ticketPool, priority);
+            int newCustomerId = numOfCustomers + 1;
+            Customer customer = new Customer(newCustomerId, customerRetrivalRate, ticketPool, priority, false, 0);
             Thread thread = new Thread(customer);
             customers.add(customer);
-            numOfCustomers++;
-            logger.info("Customer " + latestCustomerId + " successfully added to the customer list.");
-            latestCustomerId++;
+
+            logger.info("Customer " + newCustomerId + " successfully added to the customer list.");
+            numOfCustomers = newCustomerId;
             thread.start(); // This will call the run() method.
 
             // Create an ObjectMapper to serialize the objects to JSON

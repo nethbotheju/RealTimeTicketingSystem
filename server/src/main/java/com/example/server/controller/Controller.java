@@ -20,7 +20,7 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
-    public Boolean start() {
+    public Boolean start() throws FileNotFoundException {
         String result = Main.start();
 
 

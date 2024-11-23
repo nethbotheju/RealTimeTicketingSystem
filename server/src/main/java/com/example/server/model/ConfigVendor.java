@@ -20,4 +20,16 @@ public class ConfigVendor {
         this.releasedTickets = 0;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public int getReleasedTickets() {
+        return releasedTickets;
+    }
+
+    public boolean isStopped() {
+        return isStopped;
+    }
+
 }

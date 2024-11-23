@@ -34,14 +34,19 @@
           class="w-[198px] mt-3.5 pl-1 h-[162px] overflow-y-auto custom-scrollbar"
         >
           <!-- Use *ngFor to loop over vendors -->
-          <div *ngFor="let vendor of vendors" class="flex justify-between h-11">
-            <h3 class="text-[19px]">Vendor {{ vendor.vendorId }}</h3>
-            <img
-              src="stop-button.png"
-              class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
-              (click)="stopv(vendor.vendorId)"
-            />
-          </div>
+          <ng-container *ngFor="let vendor of vendors">
+            <div
+              *ngIf="!vendor.vendorStopped"
+              class="flex justify-between h-11"
+            >
+              <h3 class="text-[19px]">Vendor {{ vendor.vendorId }}</h3>
+              <img
+                src="stop-button.png"
+                class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
+                (click)="stopv(vendor.vendorId)"
+              />
+            </div>
+          </ng-container>
         </div>
       </div>
       <div
@@ -65,17 +70,19 @@
           class="w-[198px] mt-3.5 pl-1 h-[162px] overflow-y-auto custom-scrollbar"
         >
           <!-- Use *ngFor to loop over customers -->
-          <div
-            *ngFor="let customer of customers"
-            class="flex justify-between h-11"
-          >
-            <h3 class="text-[19px]">Customer {{ customer.customerId }}</h3>
-            <img
-              src="stop-button.png"
-              class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
-              (click)="stopc(customer.customerId)"
-            />
-          </div>
+          <ng-container *ngFor="let customer of customers">
+            <div
+              *ngIf="!customer.isCustomerStopped"
+              class="flex justify-between h-11"
+            >
+              <h3 class="text-[19px]">Customer {{ customer.customerId }}</h3>
+              <img
+                src="stop-button.png"
+                class="w-8 h-8 hover:opacity-70 cursor-pointer mr-6"
+                (click)="stopc(customer.customerId)"
+              />
+            </div>
+          </ng-container>
         </div>
       </div>
       <div

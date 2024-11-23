@@ -14,6 +14,7 @@ public class Vendor implements Runnable {
     private final int ticketsReleaseRate;
     private final int vendorId;
     private boolean isVendorStopped;
+    private int releaseTicketCount;
 
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
@@ -21,15 +22,16 @@ public class Vendor implements Runnable {
     private static final Logger logger = LogConfig.logger;
     private final ReentrantLock lock = new ReentrantLock();
 
-    public Vendor(int vendorId, int ticketsReleaseRate, TicketPool ticketPool) {
+    public Vendor(int vendorId, int ticketsReleaseRate, TicketPool ticketPool, boolean isVendorStopped, int releaseTicketCount) {
         this.vendorId = vendorId;
         this.ticketsReleaseRate = ticketsReleaseRate;
         this.ticketPool = ticketPool;
+        this.isVendorStopped = isVendorStopped;
+        this.releaseTicketCount = releaseTicketCount;
     }
 
     @Override
     public void run() {
-        int releaseTicketCount = 0;
         while (!Thread.currentThread().isInterrupted()) {
             try {
                 lock.lock();
@@ -88,6 +90,10 @@ public class Vendor implements Runnable {
 
     public int getVendorId() {
         return vendorId;
+    }
+
+    public boolean isVendorStopped() {
+        return isVendorStopped;
     }
 }
 

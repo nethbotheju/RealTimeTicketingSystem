@@ -16,22 +16,25 @@ public class Customer implements Runnable {
     private boolean isCustomerStopped;
     private final int priority;
 
+    private int boughtTickets;
+
     
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     private static final Logger logger = LogConfig.logger;
     private final ReentrantLock lock = new ReentrantLock();
 
-    public Customer(int customerId, int customerRetrivalRate, TicketPool ticketPool, int priority) {
+    public Customer(int customerId, int customerRetrivalRate, TicketPool ticketPool, int priority, boolean isCustomerStopped, int boughtTickets) {
         this.customerId = customerId;
         this.customerRetrivalRate = customerRetrivalRate;
         this.ticketPool = ticketPool;
         this.priority = priority;
+        this.isCustomerStopped = isCustomerStopped;
+        this.boughtTickets = boughtTickets;
     }
 
     @Override
     public void run() {
-        int boughtTicketCount = 0;
         while (!Thread.currentThread().isInterrupted()) {
             try {
                 lock.lock();
@@ -66,7 +69,7 @@ public class Customer implements Runnable {
 
                     Ticket ticket = ticketPool.removeTicket(this);
                     if (ticket != null) {
-                        boughtTicketCount++;
+                        boughtTickets++;
                     }
 
                 } finally {
@@ -97,5 +100,9 @@ public class Customer implements Runnable {
 
     public int getPriority() {
         return priority;
+    }
+
+    public boolean getIsCustomerStopped() {
+        return isCustomerStopped;
     }
 }
