@@ -36,7 +36,7 @@
           <!-- Use *ngFor to loop over vendors -->
           <ng-container *ngFor="let vendor of vendors">
             <div
-              *ngIf="!vendor.vendorStopped"
+              *ngIf="!vendor.isVendorStopped"
               class="flex justify-between h-11"
             >
               <h3 class="text-[19px]">Vendor {{ vendor.vendorId }}</h3>

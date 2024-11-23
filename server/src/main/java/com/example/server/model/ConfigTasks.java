@@ -71,5 +71,17 @@ public class ConfigTasks {
         Configuration config = loadConfigSystem();
         return gson.toJson(config);
     }
+
+    public static void saveConfigSystem(Configuration config) throws FileNotFoundException {
+        Gson gson = new Gson();
+        // Save the Config object to a JSON file
+        try (FileWriter writer = new FileWriter("config.json")) {
+            Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
+            prettyGson.toJson(config, writer); // Serialize and write to file
+            System.out.println("JSON saved to config.json");
+        } catch (IOException e) {
+            System.err.println("Error saving JSON: " + e.getMessage());
+        }
+    }
 }
 

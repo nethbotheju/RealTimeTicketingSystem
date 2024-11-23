@@ -92,8 +92,12 @@ public class Vendor implements Runnable {
         return vendorId;
     }
 
-    public boolean isVendorStopped() {
+    public boolean getIsVendorStopped() {
         return isVendorStopped;
+    }
+
+    public int getReleaseTicketCount() {
+        return releaseTicketCount;
     }
 }
 

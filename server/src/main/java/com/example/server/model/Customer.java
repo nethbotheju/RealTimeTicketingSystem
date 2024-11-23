@@ -105,4 +105,8 @@ public class Customer implements Runnable {
     public boolean getIsCustomerStopped() {
         return isCustomerStopped;
     }
+
+    public int getBoughtTickets() {
+        return boughtTickets;
+    }
 }

@@ -32,7 +32,7 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/stop")
-    public String stop() {
+    public String stop() throws FileNotFoundException {
         Main.stop();
 
         messagingTemplate.convertAndSend("/topic/stop/data", "Stopped");

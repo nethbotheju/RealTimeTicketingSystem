@@ -56,5 +56,24 @@ public class Configuration {
     public ConfigCustomer[] getListOfCustomers() {
         return listOfCustomers;
     }
+
+    public void setTotalNumberOfTickets(int totalNumberOfTickets) {
+        this.totalNumberOfTickets = totalNumberOfTickets;
+    }
+    public void setListOfVendors(ConfigVendor[] listOfVendors) {
+        this.listOfVendors = listOfVendors;
+    }
+
+    public void setListOfCustomers(ConfigCustomer[] listOfCustomers) {
+        this.listOfCustomers = listOfCustomers;
+    }
+
+    public void setNumOfVendors(int numOfVendors) {
+        this.numOfVendors = numOfVendors;
+    }
+
+    public void setNumOfCustomers(int numOfCustomers) {
+        this.numOfCustomers = numOfCustomers;
+    }
 }
 

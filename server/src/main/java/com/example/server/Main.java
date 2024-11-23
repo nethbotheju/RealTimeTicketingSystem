@@ -13,8 +13,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final ConcurrentLinkedQueue<Vendor> vendors = new ConcurrentLinkedQueue<>();
-    private static final ConcurrentLinkedQueue<Customer> customers = new ConcurrentLinkedQueue<>();
+    private static ConcurrentLinkedQueue<Vendor> vendors = new ConcurrentLinkedQueue<>();
+    private static ConcurrentLinkedQueue<Customer> customers = new ConcurrentLinkedQueue<>();
     public static boolean isProgramStopped = false;
     public static boolean isProgramStarted = false;
 
@@ -227,11 +227,38 @@ public class Main {
         return null;
     }
 
-    public static void stop() {
+    public static void stop() throws FileNotFoundException {
         isProgramStopped = true;
         isProgramStarted = false;
         logger.info("Program stopped.");
         logger.info("Total number of selled tickets. " + ticketPool.getTotalNumberOfTickets());
+
+        // Update config with total tickets sold
+        config.setTotalNumberOfTickets(ticketPool.getTotalNumberOfTickets());
+
+        // Create new customer list
+        ConfigCustomer[] newCustomerList = new ConfigCustomer[customers.size()];
+        int customerIndex = 0;
+        for (Customer c : customers) { // Correct iteration for customers
+            ConfigCustomer newCust = new ConfigCustomer(c.getCustomerId(), c.getPriority(), c.getIsCustomerStopped(), c.getBoughtTickets());
+            newCustomerList[customerIndex++] = newCust;
+        }
+
+        // Create new vendor list
+        ConfigVendor[] newVendorList = new ConfigVendor[vendors.size()];
+        int vendorIndex = 0;
+        for (Vendor v : vendors) { // Correct iteration for vendors
+            ConfigVendor newVend = new ConfigVendor(v.getVendorId(), v.getIsVendorStopped(), v.getReleaseTicketCount());
+            newVendorList[vendorIndex++] = newVend;
+        }
+
+        config.setNumOfCustomers(numOfCustomers);
+        config.setNumOfVendors(numOfVendors);
+
+        config.setListOfCustomers(newCustomerList);
+        config.setListOfVendors(newVendorList);
+
+        ConfigTasks.saveConfigSystem(config);
 
         customers.clear();
         vendors.clear();
