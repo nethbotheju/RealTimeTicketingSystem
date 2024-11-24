@@ -54,15 +54,19 @@ public class Main {
 
         ticketPool = new TicketPool(maxTicketCapacity, totalNumberOfTickets);
 
-        if (!isProgramStarted) {
+        isProgramStarted = true;
+        isProgramStopped = false;
+
             for (int i = 0; i < numOfVendors; i++) {
                 Vendor vendor = new Vendor(listOfVendors[i].getId(), ticketsReleaseRate, ticketPool, listOfVendors[i].isStopped(), listOfVendors[i].getReleasedTickets());
                 vendors.add(vendor);
                 if(!listOfVendors[i].isStopped()) {
                     Thread thread = new Thread(vendor);
+                    
                     thread.start(); // This will call the run() method.
                 }
             }
+
 
             for (int j = 0; j < numOfCustomers; j++) {
                 Customer customer = new Customer(listOfCustomers[j].getId(), customerRetrivalRate, ticketPool, listOfCustomers[j].getPriority(), listOfCustomers[j].isStopped(), listOfCustomers[j].getRetrivalTickets() );
@@ -72,9 +76,6 @@ public class Main {
                     thread.start(); // This will call the run() method.
                 }
             }
-
-            isProgramStarted = true;
-            isProgramStopped = false;
 
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
@@ -94,8 +95,7 @@ public class Main {
                 e.printStackTrace();
                 return "{}"; // Return empty JSON in case of an error
             }
-        }
-        return null;
+
     }
 
     public static String removeVendor(int vendorId) {
@@ -262,6 +262,8 @@ public class Main {
 
         customers.clear();
         vendors.clear();
+        config = null;
+        ticketPool = null;
 
         System.out.println("Stop method started");
     }

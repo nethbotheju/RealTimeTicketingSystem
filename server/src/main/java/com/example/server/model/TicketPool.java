@@ -39,7 +39,7 @@ public class TicketPool {
     public void addTickets(Ticket ticket) {
         lock.lock();
         try {
-            while (tickets.size() >= maxTicketCapacity) {
+            while (totalNumberOfTickets >= maxTicketCapacity) {
                 notFull.await(); // Wait if ticket pool is full
             }
             tickets.add(ticket);
@@ -74,9 +74,6 @@ public class TicketPool {
 
             waitingCustomers.remove(customer);
             notFull.signalAll(); // Signal that there is space for more tickets
-
-            LocalDate currentDate = LocalDate.now();
-            LocalTime currentTime = LocalTime.now();
 
             return ticket;
         } catch (InterruptedException e) {

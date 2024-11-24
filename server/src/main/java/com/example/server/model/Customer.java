@@ -18,7 +18,7 @@ public class Customer implements Runnable {
 
     private int boughtTickets;
 
-    
+
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     private static final Logger logger = LogConfig.logger;
