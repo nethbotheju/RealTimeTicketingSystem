@@ -81,8 +81,4 @@ public class Controller {
         ConfigTasks.updateConfig(jsonString);
         return "Updated SuccessFully";
     }
-
-    public void sendToFrontendLog(String message) {
-        messagingTemplate.convertAndSend("/topic/log", message);
-    }
 }

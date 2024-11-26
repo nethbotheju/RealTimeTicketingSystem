@@ -2,8 +2,11 @@ package com.example.server.model;
 
 import com.example.server.config.LogConfig;
 import com.example.server.config.SQLiteDatabaseSetup;
+import com.example.server.controller.Controller;
 import com.example.server.controller.LogController;
+import com.example.server.controller.SalesController;
 
+import java.text.DateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
@@ -24,6 +27,7 @@ public class TicketPool {
     private final List<Customer> waitingCustomers = Collections.synchronizedList(new ArrayList<>());
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
+    private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     private final ReentrantLock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
@@ -71,6 +75,7 @@ public class TicketPool {
             String message = "Customer " + customer.getCustomerId() + " successfully removed a ticket from the TicketPool.";
             logger.info(message); // logging file
             LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter))); // real time send to frontend
+            SalesController.sendToFrontendSale(new Sale(LocalDateTime.now().format(dateFormat), 1));
 
             waitingCustomers.remove(customer);
             notFull.signalAll(); // Signal that there is space for more tickets
