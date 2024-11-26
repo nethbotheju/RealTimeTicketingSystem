@@ -5,6 +5,7 @@ import com.example.server.config.SQLiteDatabaseSetup;
 import com.example.server.controller.Controller;
 import com.example.server.controller.LogController;
 import com.example.server.controller.SalesController;
+import com.example.server.controller.TicketAvailablilityController;
 
 import java.text.DateFormat;
 import java.time.format.DateTimeFormatter;
@@ -23,6 +24,8 @@ import java.time.LocalTime;
 public class TicketPool {
     public final int maxTicketCapacity;
     public  int totalNumberOfTickets;
+    private int totalBoughTickets;
+
     public final List<Ticket> tickets = Collections.synchronizedList(new ArrayList<>());
     private final List<Customer> waitingCustomers = Collections.synchronizedList(new ArrayList<>());
 
@@ -38,6 +41,7 @@ public class TicketPool {
     public TicketPool(int maxTicketCapacity, int totalNumberOfTickets) {
         this.maxTicketCapacity = maxTicketCapacity;
         this.totalNumberOfTickets = totalNumberOfTickets;
+        totalBoughTickets = totalNumberOfTickets;
     }
 
     public void addTickets(Ticket ticket) {
@@ -71,11 +75,13 @@ public class TicketPool {
                 notEmpty.await(); // Wait until there are tickets or the customer has priority
             }
             Ticket ticket = tickets.remove(0);
+            totalBoughTickets++;
 
             String message = "Customer " + customer.getCustomerId() + " successfully removed a ticket from the TicketPool.";
             logger.info(message); // logging file
             LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter))); // real time send to frontend
             SalesController.sendToFrontendSale(new Sale(LocalDateTime.now().format(dateFormat), 1));
+            TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
 
             waitingCustomers.remove(customer);
             notFull.signalAll(); // Signal that there is space for more tickets
@@ -123,5 +129,9 @@ public class TicketPool {
         } finally {
             lock.unlock();
         }
+    }
+
+    public int getTotalBoughTickets() {
+        return totalBoughTickets;
     }
 }

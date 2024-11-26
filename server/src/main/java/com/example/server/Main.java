@@ -234,7 +234,7 @@ public class Main {
         logger.info("Total number of selled tickets. " + ticketPool.getTotalNumberOfTickets());
 
         // Update config with total tickets sold
-        config.setTotalNumberOfTickets(ticketPool.getTotalNumberOfTickets());
+        config.setTotalNumberOfTickets(ticketPool.getTotalBoughTickets());
 
         // Create new customer list
         ConfigCustomer[] newCustomerList = new ConfigCustomer[customers.size()];
