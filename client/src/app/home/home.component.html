@@ -1,7 +1,24 @@
-<app-ticket-details></app-ticket-details>
-<app-control-panel></app-control-panel>
-<!-- <app-log-table-view></app-log-table-view> -->
-
-<app-sales-chart></app-sales-chart>
-
-<button (click)="natigateToCongitForm()">Config</button>
+<div class="flex items-center gap-[10px]">
+  <div class="w-[60px] h-[100vh] bg-slate-300 flex flex-col">
+    <img
+      src="setting.png"
+      (click)="natigateToCongitForm()"
+      class="mt-auto mb-12 w-10 ml-2 hover:cursor-pointer"
+    />
+  </div>
+  <h1 class="absolute top-2 left-24 text-[30px]">Real Time Ticketing System</h1>
+  <div class="grid grid-cols-2 grid-rows-2 h-screen">
+    <div class="flex justify-start items-start mt-14">
+      <app-ticket-details></app-ticket-details>
+    </div>
+    <div class="flex justify-end items-start">
+      <app-control-panel></app-control-panel>
+    </div>
+    <div class="flex justify-start items-end mb-6">
+      <app-sales-chart></app-sales-chart>
+    </div>
+    <div class="flex justify-end items-end mb-6">
+      <app-log-table-view></app-log-table-view>
+    </div>
+  </div>
+</div>

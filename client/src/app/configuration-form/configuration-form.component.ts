@@ -91,6 +91,7 @@ export class ConfigurationFormComponent {
         console.error('Error occurred:', error);
       }
     );
+    this.navigateToHome();
   }
 
   constructor(private router: Router, private http: HttpClient) {}

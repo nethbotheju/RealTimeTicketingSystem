@@ -1,15 +1,110 @@
 {
   "maxTicketCapacity": 500,
-  "totalNumberOfTickets": 13,
+  "totalNumberOfTickets": 210,
   "ticketRetrivalRate": 2,
   "ticketReleaseRate": 1,
-  "numOfVendors": 1,
-  "numOfCustomers": 10,
+  "numOfVendors": 10,
+  "numOfCustomers": 7,
   "listOfVendors": [
     {
       "id": 1,
       "isStopped": false,
-      "releasedTickets": 13
+      "releasedTickets": 49
+    },
+    {
+      "id": 2,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 3,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 4,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 5,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 6,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 7,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 8,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 9,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 10,
+      "isStopped": false,
+      "releasedTickets": 49
+    },
+    {
+      "id": 1,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 2,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 3,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 4,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 5,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 6,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 7,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 8,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 9,
+      "isStopped": false,
+      "releasedTickets": 20
+    },
+    {
+      "id": 10,
+      "isStopped": false,
+      "releasedTickets": 20
     }
   ],
   "listOfCustomers": [
@@ -17,61 +112,85 @@
       "id": 1,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 71
     },
     {
       "id": 2,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 69
     },
     {
       "id": 3,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 70
     },
     {
       "id": 4,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 70
     },
     {
       "id": 5,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 71
     },
     {
       "id": 6,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 70
     },
     {
       "id": 7,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 69
     },
     {
-      "id": 8,
+      "id": 1,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 29
     },
     {
-      "id": 9,
+      "id": 2,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 28
     },
     {
-      "id": 10,
+      "id": 3,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 1
+      "retrivalTickets": 28
+    },
+    {
+      "id": 4,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 28
+    },
+    {
+      "id": 5,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 30
+    },
+    {
+      "id": 6,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 29
+    },
+    {
+      "id": 7,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 28
     }
   ]
 }

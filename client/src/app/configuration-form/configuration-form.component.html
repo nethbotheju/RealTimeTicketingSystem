@@ -1,118 +1,122 @@
-<div class="w-[1000px] h-[600px] border-black border-2 rounded-3xl m-10">
-  <h1 class="text-[36px] mt-8 ml-[350px]">Configuration Form</h1>
-  <div class="flex ml-20 mt-14 gap-12">
-    <div class="flex flex-col gap-5">
-      <div>
-        <label for="totalNumberOfTickets" class="text-[24px]"
-          >Total number of Tickets</label
-        >
-        <input
-          id="totalNumberOfTickets"
-          [(ngModel)]="totalNumberOfTickets"
-          type="number"
-          min="0"
-          class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
-        />
-      </div>
-      <div>
-        <label for="ticketReleaseRate" class="text-[24px]"
-          >Ticket Release Rate *</label
-        >
-        <input
-          id="ticketReleaseRate"
-          [(ngModel)]="ticketReleaseRate"
-          type="number"
-          min="0"
-          class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
-        />
-      </div>
-      <div>
-        <label for="customerRetrivalRate" class="text-[24px]"
-          >Customer Retrieval Rate *</label
-        >
-        <input
-          id="customerRetrivalRate"
-          [(ngModel)]="customerRetrivalRate"
-          type="number"
-          min="0"
-          class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
-        />
-      </div>
-      <div>
-        <label for="maximumTicketCapacity" class="text-[24px]"
-          >Maximum Ticket Capacity</label
-        >
-        <input
-          id="maximumTicketCapacity"
-          [(ngModel)]="maximumTicketCapacity"
-          type="number"
-          min="0"
-          class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
-        />
-      </div>
-      <span class="text-[16px]">*ticket per secound</span>
-    </div>
-    <div>
+<div class="flex justify-center items-center h-screen">
+  <div
+    class="w-[1000px] h-[600px] border-black border-2 rounded-3xl m-10 mx-auto my-auto"
+  >
+    <h1 class="text-[36px] mt-8 ml-[350px]">Configuration Form</h1>
+    <div class="flex ml-20 mt-14 gap-12">
       <div class="flex flex-col gap-5">
         <div>
-          <label for="numOfVendors" class="text-[24px]"
-            >Number of Vendors</label
+          <label for="totalNumberOfTickets" class="text-[24px]"
+            >Total number of Tickets</label
           >
           <input
-            id="numOfVendors"
-            [(ngModel)]="numOfVendors"
+            id="totalNumberOfTickets"
+            [(ngModel)]="totalNumberOfTickets"
             type="number"
             min="0"
             class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
           />
         </div>
         <div>
-          <label for="numOfVendors" class="text-[24px]"
-            >Number of Customers</label
+          <label for="ticketReleaseRate" class="text-[24px]"
+            >Ticket Release Rate *</label
           >
           <input
-            id="numOfCustomers"
-            [(ngModel)]="numOfCustomers"
-            (input)="updateCustomers()"
+            id="ticketReleaseRate"
+            [(ngModel)]="ticketReleaseRate"
             type="number"
             min="0"
             class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
           />
         </div>
-        <div class="overflow-y-auto h-[142px] w-[272px]">
-          <table class="bg-gray-50">
-            <thead>
-              <tr>
-                <th class="w-[120px] border-2">CustomerId</th>
-                <th class="w-[150px] border-2">Priority</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let customer of customers">
-                <td class="border-2 text-center w-[120px]">
-                  {{ customer.id }}
-                </td>
-                <td class="border-2 w-[140px]">
-                  <select
-                    [(ngModel)]="customer.priority"
-                    class="bg-slate-300 w-[136px]"
-                  >
-                    <option value="3" selected>Low</option>
-                    <option value="2">Medium</option>
-                    <option value="1">High</option>
-                  </select>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div>
+          <label for="customerRetrivalRate" class="text-[24px]"
+            >Customer Retrieval Rate *</label
+          >
+          <input
+            id="customerRetrivalRate"
+            [(ngModel)]="customerRetrivalRate"
+            type="number"
+            min="0"
+            class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
+          />
+        </div>
+        <div>
+          <label for="maximumTicketCapacity" class="text-[24px]"
+            >Maximum Ticket Capacity</label
+          >
+          <input
+            id="maximumTicketCapacity"
+            [(ngModel)]="maximumTicketCapacity"
+            type="number"
+            min="0"
+            class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
+          />
+        </div>
+        <span class="text-[16px]">*ticket per secound</span>
+      </div>
+      <div>
+        <div class="flex flex-col gap-5">
+          <div>
+            <label for="numOfVendors" class="text-[24px]"
+              >Number of Vendors</label
+            >
+            <input
+              id="numOfVendors"
+              [(ngModel)]="numOfVendors"
+              type="number"
+              min="0"
+              class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
+            />
+          </div>
+          <div>
+            <label for="numOfVendors" class="text-[24px]"
+              >Number of Customers</label
+            >
+            <input
+              id="numOfCustomers"
+              [(ngModel)]="numOfCustomers"
+              (input)="updateCustomers()"
+              type="number"
+              min="0"
+              class="w-[80px] bg-slate-300 text-[20px] pl-3 ml-10 border-b-2 border-black focus:outline-none float-right"
+            />
+          </div>
+          <div class="overflow-y-auto h-[142px] w-[272px]">
+            <table class="bg-gray-50">
+              <thead>
+                <tr>
+                  <th class="w-[120px] border-2">CustomerId</th>
+                  <th class="w-[150px] border-2">Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let customer of customers">
+                  <td class="border-2 text-center w-[120px]">
+                    {{ customer.id }}
+                  </td>
+                  <td class="border-2 w-[140px]">
+                    <select
+                      [(ngModel)]="customer.priority"
+                      class="bg-slate-300 w-[136px]"
+                    >
+                      <option value="3" selected>Low</option>
+                      <option value="2">Medium</option>
+                      <option value="1">High</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
+    <button
+      (click)="submit()"
+      class="mt-5 bg-blue-500 text-white px-4 py-2 rounded float-right mr-40"
+    >
+      Submit
+    </button>
   </div>
-  <button
-    (click)="submit()"
-    class="mt-5 bg-blue-500 text-white px-4 py-2 rounded float-right mr-40"
-  >
-    Submit
-  </button>
 </div>
