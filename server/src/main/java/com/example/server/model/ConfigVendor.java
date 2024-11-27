@@ -32,4 +32,8 @@ public class ConfigVendor {
         return isStopped;
     }
 
+    public void setReleasedTickets(int releasedTickets) {
+        this.releasedTickets = releasedTickets;
+    }
+
 }

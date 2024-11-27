@@ -81,4 +81,12 @@ public class Controller {
         ConfigTasks.updateConfig(jsonString);
         return "Updated SuccessFully";
     }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/reset")
+    public Boolean reset() throws FileNotFoundException {
+        Main.reset();
+
+        return true;
+    }
 }

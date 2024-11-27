@@ -7,6 +7,7 @@ import { RemoveVendorService } from './removeVendor.service';
 import { RemoveCustomerService } from './removeCustomer.service';
 import { WebSocketService } from './web-socket.service';
 import { CommonModule } from '@angular/common';
+import { ResetService } from './reset-service.service';
 
 @Component({
   selector: 'app-control-panel',
@@ -20,6 +21,7 @@ export class ControlPanelComponent implements OnInit {
   customers: any[] = [];
   isStarted: boolean = false;
   isStopped: boolean = true;
+  isResetted: boolean = false;
 
   constructor(
     private startService: StartService,
@@ -28,7 +30,8 @@ export class ControlPanelComponent implements OnInit {
     private addCustomerService: AddCustomerService,
     private removeVendorService: RemoveVendorService,
     private removeCustomerService: RemoveCustomerService,
-    private webSocketService: WebSocketService
+    private webSocketService: WebSocketService,
+    private resetService: ResetService
   ) {}
 
   ngOnInit(): void {
@@ -49,6 +52,7 @@ export class ControlPanelComponent implements OnInit {
 
       this.isStarted = true;
       this.isStopped = false;
+      this.isResetted = true;
     });
 
     this.webSocketService.getStopMessages().subscribe((message) => {
@@ -57,6 +61,7 @@ export class ControlPanelComponent implements OnInit {
       this.customers = [];
       this.isStarted = false;
       this.isStopped = true;
+      this.isResetted = false;
     });
   }
 
@@ -64,10 +69,6 @@ export class ControlPanelComponent implements OnInit {
   start(): void {
     this.startService.startFuntion().subscribe((response) => {
       console.log(response);
-      if (response) {
-        this.isStarted = true;
-        this.isStopped = false;
-      }
     });
   }
 
@@ -147,5 +148,18 @@ export class ControlPanelComponent implements OnInit {
   // Cleanup on component destruction
   ngOnDestroy(): void {
     this.webSocketService.close();
+  }
+
+  reset(): void {
+    this.resetService.resetFuntion().subscribe({
+      next: (response) => {
+        console.log(response);
+        if (response) {
+          this.isStarted = false;
+          this.isStopped = true;
+          this.isResetted = false;
+        }
+      },
+    });
   }
 }

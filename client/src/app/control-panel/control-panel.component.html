@@ -18,7 +18,11 @@
       >
         Stop
       </button>
-      <button class="w-[72px] bg-yellow-500 p-1 rounded-[32px] h-9">
+      <button
+        class="w-[72px] bg-yellow-500 p-1 rounded-[32px] h-9"
+        [disabled]="isResetted"
+        (click)="reset()"
+      >
         Restart
       </button>
     </div>

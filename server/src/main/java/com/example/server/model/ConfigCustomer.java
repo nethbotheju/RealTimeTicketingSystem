@@ -37,4 +37,8 @@ public class ConfigCustomer {
     public int getRetrivalTickets() {
         return retrivalTickets;
     }
+
+    public void setRetrivalTickets(int retrivalTickets) {
+        this.retrivalTickets = retrivalTickets;
+    }
 }

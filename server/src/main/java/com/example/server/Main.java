@@ -267,4 +267,8 @@ public class Main {
 
         System.out.println("Stop method started");
     }
+
+    public static void reset() throws FileNotFoundException {
+        ConfigTasks.resetConfigSystem();
+    }
 }

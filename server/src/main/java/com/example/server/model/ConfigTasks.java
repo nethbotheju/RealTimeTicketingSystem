@@ -83,5 +83,19 @@ public class ConfigTasks {
             System.err.println("Error saving JSON: " + e.getMessage());
         }
     }
+
+    public static void resetConfigSystem() throws FileNotFoundException {
+        Configuration config = loadConfigSystem();
+        config.setTotalNumberOfTickets(0);
+        for (ConfigCustomer configCustomer : config.getListOfCustomers()){
+            configCustomer.setRetrivalTickets(0);
+        }
+
+        for (ConfigVendor configVendor : config.getListOfVendors()){
+            configVendor.setReleasedTickets(0);
+        }
+
+        saveConfigSystem(config);
+    }
 }
 
