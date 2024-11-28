@@ -1,6 +1,7 @@
 package com.example.server.controller;
 
 import com.example.server.Main;
+import com.example.server.ServerSocketCLI;
 import com.example.server.model.ConfigTasks;
 import org.json.simple.parser.ParseException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -27,6 +28,8 @@ public class Controller {
         // Send WebSocket message to clients connected to "/topic/updates"
         messagingTemplate.convertAndSend("/topic/start/data", result);
 
+        ServerSocketCLI.sendMessage("started");
+
         return true;
     }
 
@@ -36,6 +39,7 @@ public class Controller {
         Main.stop();
 
         messagingTemplate.convertAndSend("/topic/stop/data", "Stopped");
+        ServerSocketCLI.sendMessage("stopped");
 
         return "Stopped";
     }

@@ -77,6 +77,8 @@ public class Main {
                 }
             }
 
+            ServerSocketCLI.sendMessage("The backend started successfully");
+
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
             try {
