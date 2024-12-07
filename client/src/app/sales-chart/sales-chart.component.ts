@@ -61,7 +61,6 @@ export class SalesChartComponent implements OnInit {
   ngOnInit(): void {
     this.chart = new Chart('TicketSales', this.config);
     this.salesWebSocket.connect();
-    this.addBegin();
     this.add();
   }
 
@@ -86,7 +85,7 @@ export class SalesChartComponent implements OnInit {
     });
   }
 
-  private addBegin(): void {
+  public addBegin(): void {
     this.http
       .get('http://localhost:8080/api/salesData', { responseType: 'text' })
       .subscribe((message) => {
@@ -107,5 +106,11 @@ export class SalesChartComponent implements OnInit {
 
         this.chart.update();
       });
+  }
+
+  public clearSales(): void {
+    this.chart.data.labels = [];
+    this.chart.data.datasets[0].data = [];
+    this.chart.update();
   }
 }

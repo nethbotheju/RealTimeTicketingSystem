@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { StartService } from './start-service.service';
 import { StopService } from './stop-service.service';
 import { AddVendorService } from './addVendor.service';
@@ -17,6 +17,9 @@ import { ResetService } from './reset-service.service';
   styleUrls: ['./control-panel.component.css'],
 })
 export class ControlPanelComponent implements OnInit {
+  @Output('startClicked') public startClicked = new EventEmitter();
+  @Output('stopClicked') public stopClicked = new EventEmitter();
+
   vendors: any[] = [];
   customers: any[] = [];
   isStarted: boolean = false;
@@ -61,12 +64,14 @@ export class ControlPanelComponent implements OnInit {
       this.customers = [];
       this.isStarted = false;
       this.isStopped = true;
+      this.stopClicked.next(true);
       this.isResetted = false;
     });
   }
 
   // Start function
   start(): void {
+    this.startClicked.next(true);
     this.startService.startFuntion().subscribe((response) => {
       console.log(response);
     });

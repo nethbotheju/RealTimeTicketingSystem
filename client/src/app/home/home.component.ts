@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { TicketDetailsComponent } from '../ticket-details/ticket-details.component';
 import { ControlPanelComponent } from '../control-panel/control-panel.component';
 import { LogTableViewComponent } from '../log-table-view/log-table-view.component';
@@ -22,5 +22,17 @@ export class HomeComponent {
 
   natigateToCongitForm() {
     this.router.navigate(['/configuration-form']);
+  }
+
+  @ViewChild('salesChart') public salesChart!: SalesChartComponent;
+  @ViewChild('ticketDetails') public ticketDetails!: TicketDetailsComponent;
+
+  startedClicked() {
+    this.salesChart.addBegin();
+  }
+
+  stopClicked() {
+    this.salesChart.clearSales();
+    this.ticketDetails.clear();
   }
 }

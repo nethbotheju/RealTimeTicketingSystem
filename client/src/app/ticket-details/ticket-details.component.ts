@@ -26,4 +26,8 @@ export class TicketDetailsComponent implements OnInit {
       this.noOfTickets = num;
     });
   }
+
+  clear(): void {
+    this.noOfTickets = 0;
+  }
 }

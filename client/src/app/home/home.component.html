@@ -9,13 +9,16 @@
   <h1 class="absolute top-2 left-24 text-[30px]">Real Time Ticketing System</h1>
   <div class="grid grid-cols-2 grid-rows-2 h-screen">
     <div class="flex justify-start items-start mt-14">
-      <app-ticket-details></app-ticket-details>
+      <app-ticket-details #ticketDetails></app-ticket-details>
     </div>
     <div class="flex justify-end items-start">
-      <app-control-panel></app-control-panel>
+      <app-control-panel
+        (startClicked)="startedClicked()"
+        (stopClicked)="stopClicked()"
+      ></app-control-panel>
     </div>
     <div class="flex justify-start items-end mb-6">
-      <app-sales-chart></app-sales-chart>
+      <app-sales-chart #salesChart></app-sales-chart>
     </div>
     <div class="flex justify-end items-end mb-6">
       <app-log-table-view></app-log-table-view>
