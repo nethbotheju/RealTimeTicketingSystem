@@ -85,29 +85,6 @@ export class SalesChartComponent implements OnInit {
     });
   }
 
-  public addBegin(): void {
-    this.http
-      .get('http://localhost:8080/api/salesData', { responseType: 'text' })
-      .subscribe((message) => {
-        this.parsedArray = JSON.parse(message);
-
-        this.parsedArray.forEach((sale) => {
-          const dateIndex = this.chart.data.labels?.indexOf(sale.date) ?? -1;
-
-          if (dateIndex === -1) {
-            // New date, add to labels and data
-            this.chart.data.labels.push(sale.date);
-            this.chart.data.datasets[0].data.push(sale.count);
-          } else {
-            // Existing date, update the count
-            this.chart.data.datasets[0].data[dateIndex] += sale.count;
-          }
-        });
-
-        this.chart.update();
-      });
-  }
-
   public clearSales(): void {
     this.chart.data.labels = [];
     this.chart.data.datasets[0].data = [];
