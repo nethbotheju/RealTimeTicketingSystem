@@ -2,6 +2,7 @@ package com.example.server.controller;
 
 import com.example.server.Main;
 import com.example.server.ServerSocketCLI;
+import com.example.server.config.DatabaseSetup;
 import com.example.server.model.ConfigTasks;
 import org.json.simple.parser.ParseException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -92,5 +93,11 @@ public class Controller {
         Main.reset();
 
         return true;
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/salesData")
+    public String salesData() {
+        return DatabaseSetup.fetchSales();
     }
 }

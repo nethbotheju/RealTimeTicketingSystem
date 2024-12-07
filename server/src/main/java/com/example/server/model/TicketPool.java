@@ -1,7 +1,7 @@
 package com.example.server.model;
 
+import com.example.server.config.DatabaseSetup;
 import com.example.server.config.LogConfig;
-import com.example.server.config.SQLiteDatabaseSetup;
 import com.example.server.controller.Controller;
 import com.example.server.controller.LogController;
 import com.example.server.controller.SalesController;
@@ -81,6 +81,7 @@ public class TicketPool {
             logger.info(message); // logging file
             LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter))); // real time send to frontend
             SalesController.sendToFrontendSale(new Sale(LocalDateTime.now().format(dateFormat), 1));
+            DatabaseSetup.insertIntoSales(LocalDateTime.now().format(dateFormat), 1);
             TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
 
             waitingCustomers.remove(customer);

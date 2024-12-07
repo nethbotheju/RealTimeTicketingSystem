@@ -26,15 +26,23 @@ public class ConfigTasks {
         int numOfVendors = ((Long) jsonObject.get("numOfVendors")).intValue();
         int numOfCustomers = ((Long) jsonObject.get("numOfCustomers")).intValue();
 
-
+        ConfigCustomer[] listOfCustomers;
         JSONArray Customers = (JSONArray) jsonObject.get("Customers");
-        ConfigCustomer[] listOfCustomers = new ConfigCustomer[Customers.size()];
-        for (int i = 0; i < Customers.size(); i++) {
-            JSONObject customer = (JSONObject) Customers.get(i);
-            int id = ((Long) customer.get("id")).intValue();
-            int priority = ((Long) customer.get("priority")).intValue();
-            listOfCustomers[i] = new ConfigCustomer(id, priority);
+        if(Customers != null){
+            listOfCustomers = new ConfigCustomer[Customers.size()];
+            for (int i = 0; i < Customers.size(); i++) {
+                JSONObject customer = (JSONObject) Customers.get(i);
+                int id = ((Long) customer.get("id")).intValue();
+                int priority = ((Long) customer.get("priority")).intValue();
+                listOfCustomers[i] = new ConfigCustomer(id, priority);
+            }
+        }else{
+            listOfCustomers = new ConfigCustomer[numOfCustomers];
+            for (int i = 0; i < numOfCustomers; i++) {
+                listOfCustomers[i] = new ConfigCustomer(i+1, 3);
+            }
         }
+
 
         ConfigVendor[] listOfVendors = new ConfigVendor[numOfVendors];
         for (int i = 0; i < numOfVendors; i++) {
