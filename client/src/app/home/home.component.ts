@@ -27,10 +27,6 @@ export class HomeComponent {
   @ViewChild('salesChart') public salesChart!: SalesChartComponent;
   @ViewChild('ticketDetails') public ticketDetails!: TicketDetailsComponent;
 
-  startedClicked() {
-    this.salesChart.addBegin();
-  }
-
   stopClicked() {
     this.salesChart.clearSales();
     this.ticketDetails.clear();

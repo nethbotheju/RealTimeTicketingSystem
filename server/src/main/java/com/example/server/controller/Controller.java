@@ -23,6 +23,8 @@ public class Controller {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
     public Boolean start() throws FileNotFoundException {
+        DatabaseSetup.fetchSales();
+
         String result = Main.start();
 
 
@@ -95,9 +97,4 @@ public class Controller {
         return true;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/salesData")
-    public String salesData() {
-        return DatabaseSetup.fetchSales();
-    }
 }

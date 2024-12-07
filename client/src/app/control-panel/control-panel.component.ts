@@ -17,7 +17,6 @@ import { ResetService } from './reset-service.service';
   styleUrls: ['./control-panel.component.css'],
 })
 export class ControlPanelComponent implements OnInit {
-  @Output('startClicked') public startClicked = new EventEmitter();
   @Output('stopClicked') public stopClicked = new EventEmitter();
 
   vendors: any[] = [];
@@ -71,7 +70,6 @@ export class ControlPanelComponent implements OnInit {
 
   // Start function
   start(): void {
-    this.startClicked.next(true);
     this.startService.startFuntion().subscribe((response) => {
       console.log(response);
     });

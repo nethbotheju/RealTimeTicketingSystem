@@ -1,6 +1,7 @@
 package com.example.server.config;
 
 
+import com.example.server.controller.SalesController;
 import com.example.server.model.Sale;
 import com.google.gson.Gson;
 
@@ -40,7 +41,7 @@ public class DatabaseSetup {
         }
     }
 
-    public static String fetchSales(){
+    public static void fetchSales(){
         String sql = "SELECT * FROM sales";
 
         try(Statement stmt = connection.createStatement();
@@ -49,17 +50,12 @@ public class DatabaseSetup {
             ArrayList<Sale> sales = new ArrayList<>();
 
             while (rs.next()){
-                sales.add(new Sale(rs.getString("date"), rs.getInt("count")));
+                SalesController.sendToFrontendSale(new Sale(rs.getString("date"), rs.getInt("count")));
             }
-
-            Gson gson = new Gson();
-            return gson.toJson(sales);
-
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
 
-        return null;
     }
 
     public static void deleteAllSales (){
