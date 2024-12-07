@@ -1,5 +1,6 @@
 package com.example.server;
 
+import com.example.server.config.DatabaseSetup;
 import com.example.server.config.LogConfig;
 import com.example.server.model.*;
 
@@ -272,5 +273,6 @@ public class Main {
 
     public static void reset() throws FileNotFoundException {
         ConfigTasks.resetConfigSystem();
+        DatabaseSetup.deleteAllSales();
     }
 }

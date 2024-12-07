@@ -61,4 +61,15 @@ public class DatabaseSetup {
 
         return null;
     }
+
+    public static void deleteAllSales (){
+        String sql = "DELETE FROM sales";
+
+        try{
+            PreparedStatement psmt = connection.prepareStatement(sql);
+            psmt.executeUpdate();
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
 }

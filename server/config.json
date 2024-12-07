@@ -1,9 +1,9 @@
 {
   "maxTicketCapacity": 120,
-  "totalNumberOfTickets": 0,
+  "totalNumberOfTickets": 120,
   "ticketRetrivalRate": 1,
   "ticketReleaseRate": 2,
-  "numOfVendors": 3,
+  "numOfVendors": 4,
   "numOfCustomers": 4,
   "listOfVendors": [
     {
@@ -18,6 +18,11 @@
     },
     {
       "id": 3,
+      "isStopped": false,
+      "releasedTickets": 0
+    },
+    {
+      "id": 4,
       "isStopped": false,
       "releasedTickets": 0
     }

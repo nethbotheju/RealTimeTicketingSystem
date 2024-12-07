@@ -1,5 +1,6 @@
 package com.example.server.model;
 
+import com.example.server.config.DatabaseSetup;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.json.simple.JSONArray;
@@ -60,6 +61,9 @@ public class ConfigTasks {
         } catch (IOException e) {
             System.err.println("Error saving JSON: " + e.getMessage());
         }
+
+        // Delete sales data in the sqlite database
+        DatabaseSetup.deleteAllSales();
     }
 
     public static Configuration loadConfigSystem() throws FileNotFoundException {
