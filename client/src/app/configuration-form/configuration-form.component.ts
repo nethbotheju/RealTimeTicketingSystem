@@ -86,12 +86,13 @@ export class ConfigurationFormComponent {
     this.http.post(apiUrl, payload, { responseType: 'text' }).subscribe(
       (response) => {
         console.log('Response received:', response);
+        alert('Configurations are successfully send to the backend!');
+        this.navigateToHome();
       },
       (error) => {
         console.error('Error occurred:', error);
       }
     );
-    this.navigateToHome();
   }
 
   constructor(private router: Router, private http: HttpClient) {}

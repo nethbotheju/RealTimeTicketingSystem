@@ -4,6 +4,7 @@
       src="setting.png"
       (click)="natigateToCongitForm()"
       class="mt-auto mb-12 w-10 ml-2 hover:cursor-pointer"
+      title="Configuration Form"
     />
   </div>
   <h1 class="absolute top-2 left-24 text-[30px]">Real Time Ticketing System</h1>
@@ -15,6 +16,7 @@
       <app-control-panel
         (startClicked)="startClicked()"
         (stopClicked)="stopClicked()"
+        #controlPanel
       ></app-control-panel>
     </div>
     <div class="flex justify-start items-end mb-6">

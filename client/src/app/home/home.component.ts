@@ -19,7 +19,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   isProgramRunning: boolean = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.preventRefresh = this.preventRefresh.bind(this);
+  }
 
   natigateToCongitForm() {
     if (this.isProgramRunning) {
@@ -31,16 +33,25 @@ export class HomeComponent {
     }
   }
 
+  @ViewChild('controlPanel') public controlPanel!: ControlPanelComponent;
   @ViewChild('salesChart') public salesChart!: SalesChartComponent;
   @ViewChild('ticketDetails') public ticketDetails!: TicketDetailsComponent;
 
   startClicked() {
     this.isProgramRunning = true;
+    window.addEventListener('beforeunload', this.preventRefresh);
   }
 
   stopClicked() {
     this.isProgramRunning = false;
     this.salesChart.clearSales();
     this.ticketDetails.clear();
+    window.removeEventListener('beforeunload', this.preventRefresh);
+  }
+
+  preventRefresh(event: BeforeUnloadEvent) {
+    if (this.isProgramRunning) {
+      this.controlPanel.stop();
+    }
   }
 }
