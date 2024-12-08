@@ -17,6 +17,7 @@ import { ResetService } from './reset-service.service';
   styleUrls: ['./control-panel.component.css'],
 })
 export class ControlPanelComponent implements OnInit {
+  @Output('startClicked') public startClicked = new EventEmitter();
   @Output('stopClicked') public stopClicked = new EventEmitter();
 
   vendors: any[] = [];
@@ -53,6 +54,7 @@ export class ControlPanelComponent implements OnInit {
       this.vendors = parsedMessage.vendors;
 
       this.isStarted = true;
+      this.startClicked.next(true);
       this.isStopped = false;
       this.isResetted = true;
     });

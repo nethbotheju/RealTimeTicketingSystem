@@ -12,7 +12,10 @@
       <app-ticket-details #ticketDetails></app-ticket-details>
     </div>
     <div class="flex justify-end items-start">
-      <app-control-panel (stopClicked)="stopClicked()"></app-control-panel>
+      <app-control-panel
+        (startClicked)="startClicked()"
+        (stopClicked)="stopClicked()"
+      ></app-control-panel>
     </div>
     <div class="flex justify-start items-end mb-6">
       <app-sales-chart #salesChart></app-sales-chart>
