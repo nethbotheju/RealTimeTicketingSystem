@@ -2,11 +2,10 @@ package org.example;
 
 import java.net.URI;
 import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
 import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse;
 
-public class HttpStartRequest {
+public class HttpRequest {
     public static void startHttp(){
         // Define the backend URL
         String url = "http://localhost:8080/api/start"; // Replace with your actual URL
@@ -15,7 +14,7 @@ public class HttpStartRequest {
         HttpClient client = HttpClient.newHttpClient();
 
         // Build the GET request
-        HttpRequest request = HttpRequest.newBuilder()
+        java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .GET()
                 .build();
@@ -41,7 +40,7 @@ public class HttpStartRequest {
         HttpClient client = HttpClient.newHttpClient();
 
         // Build the GET request
-        HttpRequest request = HttpRequest.newBuilder()
+        java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .GET()
                 .build();
@@ -67,7 +66,7 @@ public class HttpStartRequest {
         HttpClient client = HttpClient.newHttpClient();
 
         // Build the POST request with the request body
-        HttpRequest request = HttpRequest.newBuilder()
+        java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .POST(BodyPublishers.ofString(requestBody))
                 .header("Content-Type", "application/json") // Set the content type if needed

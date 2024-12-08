@@ -100,7 +100,7 @@ public class Main {
         jsonObject.put("numOfVendors", noOfVendors);
         jsonObject.put("numOfCustomers", noOfCustomers);
 
-        HttpStartRequest.configHttp(jsonObject.toString());
+        HttpRequest.configHttp(jsonObject.toString());
         System.out.println("Configuration parameters are collected properly and updated!");
 
         try {
@@ -142,13 +142,13 @@ public class Main {
 
                     if (command.equals("start")) {
                         if (!started) {
-                            HttpStartRequest.startHttp();
+                            HttpRequest.startHttp();
                         } else {
                             System.out.println("Program already started");
                         }
                     } else if (command.equals("stop")) {
                         if (!stopped) {
-                            HttpStartRequest.stopHttp();
+                            HttpRequest.stopHttp();
                         } else {
                             System.out.println("Program already stopped");
                         }
