@@ -80,12 +80,7 @@ public class Vendor implements Runnable {
     }
 
     public void setIsVendorStopped(boolean result) {
-        lock.lock();
-        try {
             isVendorStopped = result;
-        } finally {
-            lock.unlock();
-        }
     }
 
     public int getVendorId() {

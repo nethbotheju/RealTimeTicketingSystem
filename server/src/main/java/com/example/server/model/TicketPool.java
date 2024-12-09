@@ -1,5 +1,6 @@
 package com.example.server.model;
 
+import com.example.server.Main;
 import com.example.server.config.DatabaseSetup;
 import com.example.server.config.LogConfig;
 import com.example.server.controller.Controller;
@@ -12,6 +13,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
 import java.util.logging.Logger;
@@ -27,13 +30,12 @@ public class TicketPool {
     private int totalBoughTickets;
 
     public final List<Ticket> tickets = Collections.synchronizedList(new ArrayList<>());
-    private final List<Customer> waitingCustomers = Collections.synchronizedList(new ArrayList<>());
+    private final List<Customer> waitingCustomers = new CopyOnWriteArrayList<>();
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
     private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     private final ReentrantLock lock = new ReentrantLock();
-    private final Condition notFull = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
 
     private static final Logger logger = LogConfig.logger;
@@ -47,9 +49,6 @@ public class TicketPool {
     public void addTickets(Ticket ticket) {
         lock.lock();
         try {
-            while (totalNumberOfTickets >= maxTicketCapacity) {
-                notFull.await(); // Wait if ticket pool is full
-            }
             tickets.add(ticket);
             totalNumberOfTickets++;
 
@@ -60,45 +59,81 @@ public class TicketPool {
 
 
             notEmpty.signalAll(); // Signal that tickets are available
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
         } finally {
             lock.unlock();
         }
     }
 
     public Ticket removeTicket(Customer customer) {
-        lock.lock();
-        try {
-            waitingCustomers.add(customer);
-            while (tickets.isEmpty() || !customer.equals(getHighestPriorityCustomer())) {
-                notEmpty.await(); // Wait until there are tickets or the customer has priority
+        waitingCustomers.add(customer);
+        while (true) {
+            // Check if the program is stopped
+            if (Main.isProgramStopped) {
+                String message = "Program stopped. Customer " + customer.getCustomerId() + " stopped.";
+                logger.info(message);
+                LogController.sendToFrontendLog(new LogEntry("Info", message, LocalDateTime.now().format(formatter)));
+
+                waitingCustomers.remove(customer);
+                return null; // Exit the loop and method gracefully
             }
-            Ticket ticket = tickets.remove(0);
-            totalBoughTickets++;
 
-            String message = "Customer " + customer.getCustomerId() + " successfully removed a ticket from the TicketPool.";
-            logger.info(message); // logging file
-            LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter))); // real time send to frontend
-            SalesController.sendToFrontendSale(new Sale(LocalDateTime.now().format(dateFormat), 1));
-            DatabaseSetup.insertIntoSales(LocalDateTime.now().format(dateFormat), 1);
-            TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
+            // Check if the customer is manually stopped
+            if (customer.getIsCustomerStopped()) {
+                String message = "Customer " + customer.getCustomerId() + " stopped successfully.";
+                logger.info(message);
+                LogController.sendToFrontendLog(new LogEntry("Info", message, LocalDateTime.now().format(formatter)));
 
-            waitingCustomers.remove(customer);
-            notFull.signalAll(); // Signal that there is space for more tickets
+                waitingCustomers.remove(customer);
+                return null;
+            }
 
-            return ticket;
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            return null;
-        } finally {
-            lock.unlock();
+            // Check if the maximum ticket capacity is reached and the pool is empty
+            if (getTotalNumberOfTickets() >= maxTicketCapacity && isTicketPoolEmpty()) {
+                String message = "Maximum ticket capacity reached, and the ticket pool is empty. Customer "
+                        + customer.getCustomerId() + " stopped buying tickets.";
+                logger.info(message);
+                LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
+
+                waitingCustomers.remove(customer);
+                return null;
+            }
+
+            // Check if the customer has the highest priority
+            if (customer.equals(getHighestPriorityCustomer())) {
+                lock.lock();
+                try {
+                    while (tickets.isEmpty()) {
+                        notEmpty.await(); // Wait until tickets become available
+                    }
+
+                    // Remove a ticket and perform necessary actions
+                    Ticket ticket = tickets.remove(0);
+                    totalBoughTickets++;
+
+                    String message = "Customer " + customer.getCustomerId() + " successfully removed a ticket from the TicketPool.";
+                    logger.info(message);
+                    LocalDateTime dateTime = LocalDateTime.now();
+                    LogController.sendToFrontendLog(new LogEntry("Success", message, dateTime.format(formatter)));
+                    SalesController.sendToFrontendSale(new Sale(dateTime.format(dateFormat), 1));
+                    DatabaseSetup.insertIntoSales(dateTime.format(dateFormat), 1);
+                    TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
+
+                    waitingCustomers.remove(customer);
+                    return ticket;
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    waitingCustomers.remove(customer);
+                    return null;
+                } finally {
+                    lock.unlock();
+                }
+            }
         }
     }
 
-    private Customer getHighestPriorityCustomer() {
-        lock.lock();
-        try {
+
+
+    private synchronized Customer getHighestPriorityCustomer() {
             int highestPriority = waitingCustomers.stream()
                     .mapToInt(Customer::getPriority)
                     .min()
@@ -109,27 +144,19 @@ public class TicketPool {
                     .filter(customer -> customer.getPriority() == highestPriority)
                     .findFirst()
                     .orElse(null);
-        } finally {
-            lock.unlock();
-        }
     }
 
     public int getTotalNumberOfTickets() {
         lock.lock();
-        try {
+        try{
             return totalNumberOfTickets;
-        } finally {
+        }finally {
             lock.unlock();
         }
     }
 
     public boolean isTicketPoolEmpty() {
-        lock.lock();
-        try {
             return tickets.isEmpty();
-        } finally {
-            lock.unlock();
-        }
     }
 
     public int getTotalBoughTickets() {

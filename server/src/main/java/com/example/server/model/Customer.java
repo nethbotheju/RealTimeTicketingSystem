@@ -37,8 +37,6 @@ public class Customer implements Runnable {
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                lock.lock();
-                try {
                     if (Main.isProgramStopped) {
                         String message = "Program stopped. So customer " + customerId + " stopped.";
                         logger.info(message);
@@ -72,9 +70,6 @@ public class Customer implements Runnable {
                         boughtTickets++;
                     }
 
-                } finally {
-                    lock.unlock();
-                }
 
                 Thread.sleep(1000 / customerRetrivalRate); // customer ticket retrieval rate per second
             } catch (InterruptedException e) {
@@ -86,12 +81,7 @@ public class Customer implements Runnable {
     }
 
     public void setIsCustomerStopped(boolean result) {
-        lock.lock();
-        try {
             isCustomerStopped = result;
-        } finally {
-            lock.unlock();
-        }
     }
 
     public int getCustomerId() {
