@@ -9,7 +9,7 @@
     {
       "id": 1,
       "isStopped": false,
-      "releasedTickets": 2
+      "releasedTickets": 3
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
     {
       "id": 4,
       "isStopped": false,
-      "releasedTickets": 3
+      "releasedTickets": 2
     },
     {
       "id": 5,
@@ -67,8 +67,8 @@
     {
       "id": 2,
       "priority": 3,
-      "isStopped": false,
-      "retrivalTickets": 3
+      "isStopped": true,
+      "retrivalTickets": 1
     },
     {
       "id": 3,
@@ -79,8 +79,8 @@
     {
       "id": 4,
       "priority": 3,
-      "isStopped": false,
-      "retrivalTickets": 2
+      "isStopped": true,
+      "retrivalTickets": 1
     },
     {
       "id": 5,
@@ -92,13 +92,13 @@
       "id": 6,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 3
     },
     {
       "id": 7,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 3
     },
     {
       "id": 8,
@@ -110,12 +110,12 @@
       "id": 9,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 2
+      "retrivalTickets": 3
     },
     {
       "id": 10,
       "priority": 3,
-      "isStopped": false,
+      "isStopped": true,
       "retrivalTickets": 2
     }
   ]

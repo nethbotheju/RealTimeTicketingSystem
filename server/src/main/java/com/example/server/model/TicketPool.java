@@ -72,24 +72,10 @@ public class TicketPool {
         waitingCustomers.put(customer);
         while (true) {
             // Check if the program is stopped
-            if (Main.isProgramStopped) {
+            if (Main.isProgramStopped || customer.getIsCustomerStopped() || getTotalNumberOfTickets() >= maxTicketCapacity && isTicketPoolEmpty()) {
 
                 waitingCustomers.remove(customer);
                 return null; // Exit the loop and method gracefully
-            }
-
-            // Check if the customer is manually stopped
-            if (customer.getIsCustomerStopped()) {
-
-                waitingCustomers.remove(customer);
-                return null;
-            }
-
-            // Check if the maximum ticket capacity is reached and the pool is empty
-            if (getTotalNumberOfTickets() >= maxTicketCapacity && isTicketPoolEmpty()) {
-
-                waitingCustomers.remove(customer);
-                return null;
             }
 
             // Check if the customer has the highest priority

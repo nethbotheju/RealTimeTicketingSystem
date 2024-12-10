@@ -70,7 +70,7 @@ public class Vendor implements Runnable {
                     lock.unlock();
                 }
 
-                Thread.sleep(1000 / ticketsReleaseRate); // ticket release rate per second
+                Thread.sleep(10000 / ticketsReleaseRate); // ticket release rate per second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 logger.severe("Error: " + e.getMessage());
