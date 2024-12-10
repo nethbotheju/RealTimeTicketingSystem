@@ -37,39 +37,11 @@ public class Customer implements Runnable {
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                    if (Main.isProgramStopped) {
-                        String message = "Program stopped. So customer " + customerId + " stopped.";
-                        logger.info(message);
-                        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
-
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-
-                    if (isCustomerStopped) {
-                        String message = "Customer " + customerId + " stopped successfully.";
-                        logger.info(message);
-                        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
-
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-
-                    if (ticketPool.getTotalNumberOfTickets() >= ticketPool.maxTicketCapacity && ticketPool.isTicketPoolEmpty()) {
-                        String message = "Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer " + customerId + ". Stopping buying tickets.";
-                        logger.info(message);
-                        LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
-
-
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-
                     Ticket ticket = ticketPool.removeTicket(this);
                     if (ticket != null) {
                         boughtTickets++;
                     }else{
-                        continue;
+                        Thread.currentThread().interrupt();
                     }
 
 

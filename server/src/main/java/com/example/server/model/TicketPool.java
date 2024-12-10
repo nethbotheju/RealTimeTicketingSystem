@@ -72,20 +72,40 @@ public class TicketPool {
         waitingCustomers.put(customer);
         while (true) {
             // Check if the program is stopped
-            if (Main.isProgramStopped || customer.getIsCustomerStopped() || getTotalNumberOfTickets() >= maxTicketCapacity && isTicketPoolEmpty()) {
+            if (Main.isProgramStopped) {
+                String message = "Program stopped. So customer " + customer.getCustomerId() + " stopped.";
+                logger.info(message);
+                LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
-                waitingCustomers.remove(customer);
-                return null; // Exit the loop and method gracefully
+                return null;
             }
 
-            // Check if the customer has the highest priority
-            if (customer.equals(waitingCustomers.peek())) {
-                lock.lock();
-                try {
-                    while (tickets.isEmpty()) {
-                        notEmpty.await(); // Wait until tickets become available
-                    }
+            if (customer.getIsCustomerStopped()) {
+                String message = "Customer " + customer.getCustomerId() + " stopped successfully.";
+                logger.info(message);
+                LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
+                return null;
+            }
+
+
+            lock.lock();
+            try {
+                if(tickets.isEmpty() && totalNumberOfTickets >= maxTicketCapacity) {
+                    waitingCustomers.remove(customer);
+
+                    String message = "Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer " + customer.getCustomerId() + ". Stopping buying tickets.";
+                    logger.info(message);
+                    LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
+
+                    return null;
+                }
+
+                if(tickets.isEmpty()) {
+                    notEmpty.await(); // Wait until tickets become available
+                }
+
+                if (customer.equals(waitingCustomers.peek())) {
                     // Remove a ticket and perform necessary actions
                     Ticket ticket = tickets.remove(0);
                     totalBoughTickets++;
@@ -100,14 +120,15 @@ public class TicketPool {
 
                     waitingCustomers.poll();
                     return ticket;
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    waitingCustomers.remove(customer);
-                    return null;
-                } finally {
-                    lock.unlock();
                 }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                waitingCustomers.remove(customer);
+                return null;
+            } finally {
+                lock.unlock();
             }
+
         }
     }
 
