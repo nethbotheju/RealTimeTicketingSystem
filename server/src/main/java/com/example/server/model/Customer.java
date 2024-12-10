@@ -68,10 +68,12 @@ public class Customer implements Runnable {
                     Ticket ticket = ticketPool.removeTicket(this);
                     if (ticket != null) {
                         boughtTickets++;
+                    }else{
+                        continue;
                     }
 
 
-                Thread.sleep(1000 / customerRetrivalRate); // customer ticket retrieval rate per second
+                Thread.sleep(10000 / customerRetrivalRate); // customer ticket retrieval rate per second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 logger.severe("Error: " + e.getMessage());

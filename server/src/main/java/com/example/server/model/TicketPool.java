@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
 import java.util.logging.Logger;
@@ -30,7 +31,10 @@ public class TicketPool {
     private int totalBoughTickets;
 
     public final List<Ticket> tickets = Collections.synchronizedList(new ArrayList<>());
-    private final List<Customer> waitingCustomers = new CopyOnWriteArrayList<>();
+    private final PriorityBlockingQueue<Customer> waitingCustomers = new PriorityBlockingQueue<>(
+            100,
+            (c1, c2) -> Integer.compare(c1.getPriority(), c2.getPriority())
+    );
 
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
     private static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -65,13 +69,10 @@ public class TicketPool {
     }
 
     public Ticket removeTicket(Customer customer) {
-        waitingCustomers.add(customer);
+        waitingCustomers.put(customer);
         while (true) {
             // Check if the program is stopped
             if (Main.isProgramStopped) {
-                String message = "Program stopped. Customer " + customer.getCustomerId() + " stopped.";
-                logger.info(message);
-                LogController.sendToFrontendLog(new LogEntry("Info", message, LocalDateTime.now().format(formatter)));
 
                 waitingCustomers.remove(customer);
                 return null; // Exit the loop and method gracefully
@@ -79,9 +80,6 @@ public class TicketPool {
 
             // Check if the customer is manually stopped
             if (customer.getIsCustomerStopped()) {
-                String message = "Customer " + customer.getCustomerId() + " stopped successfully.";
-                logger.info(message);
-                LogController.sendToFrontendLog(new LogEntry("Info", message, LocalDateTime.now().format(formatter)));
 
                 waitingCustomers.remove(customer);
                 return null;
@@ -89,17 +87,13 @@ public class TicketPool {
 
             // Check if the maximum ticket capacity is reached and the pool is empty
             if (getTotalNumberOfTickets() >= maxTicketCapacity && isTicketPoolEmpty()) {
-                String message = "Maximum ticket capacity reached, and the ticket pool is empty. Customer "
-                        + customer.getCustomerId() + " stopped buying tickets.";
-                logger.info(message);
-                LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
 
                 waitingCustomers.remove(customer);
                 return null;
             }
 
             // Check if the customer has the highest priority
-            if (customer.equals(getHighestPriorityCustomer())) {
+            if (customer.equals(waitingCustomers.peek())) {
                 lock.lock();
                 try {
                     while (tickets.isEmpty()) {
@@ -118,7 +112,7 @@ public class TicketPool {
                     DatabaseSetup.insertIntoSales(dateTime.format(dateFormat), 1);
                     TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
 
-                    waitingCustomers.remove(customer);
+                    waitingCustomers.poll();
                     return ticket;
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
@@ -131,20 +125,6 @@ public class TicketPool {
         }
     }
 
-
-
-    private synchronized Customer getHighestPriorityCustomer() {
-            int highestPriority = waitingCustomers.stream()
-                    .mapToInt(Customer::getPriority)
-                    .min()
-                    .orElse(Integer.MAX_VALUE);
-
-            // Return the first customer with the highest priority
-            return waitingCustomers.stream()
-                    .filter(customer -> customer.getPriority() == highestPriority)
-                    .findFirst()
-                    .orElse(null);
-    }
 
     public int getTotalNumberOfTickets() {
         lock.lock();
