@@ -38,13 +38,13 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/stop")
-    public String stop() throws FileNotFoundException {
+    public Boolean stop() throws FileNotFoundException {
         Main.stop();
 
         messagingTemplate.convertAndSend("/topic/stop/data", "Stopped");
         ServerSocketCLI.sendMessage("stopped");
 
-        return "Stopped";
+        return true;
     }
 
     @CrossOrigin(origins = "http://localhost:4200")

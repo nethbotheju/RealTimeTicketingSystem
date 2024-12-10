@@ -9,8 +9,7 @@ export class RemoveCustomerService {
   constructor(private http: HttpClient) {}
 
   removeCustomerFunction(id: number): Observable<{ customers: any[] }> {
-    // Append the priority to the URL path
-    const urlWithPriority = `${this.apiUrl}/${id}`;
-    return this.http.delete<{ customers: any[] }>(urlWithPriority, {});
+    const urlWithId = `${this.apiUrl}/${id}`;
+    return this.http.delete<{ customers: any[] }>(urlWithId, {});
   }
 }

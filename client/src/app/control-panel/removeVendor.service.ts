@@ -9,8 +9,7 @@ export class RemoveVendorService {
   constructor(private http: HttpClient) {}
 
   removeVendorFunction(id: number): Observable<{ vendors: any[] }> {
-    // Append the priority to the URL path
-    const urlWithPriority = `${this.apiUrl}/${id}`;
-    return this.http.delete<{ vendors: any[] }>(urlWithPriority, {});
+    const urlWithId = `${this.apiUrl}/${id}`;
+    return this.http.delete<{ vendors: any[] }>(urlWithId, {});
   }
 }

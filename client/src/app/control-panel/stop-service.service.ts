@@ -8,7 +8,7 @@ export class StopService {
 
   constructor(private http: HttpClient) {}
 
-  stopFuntion(): Observable<string> {
-    return this.http.get(this.apiUrl, { responseType: 'text' });
+  stopFuntion(): Observable<boolean> {
+    return this.http.get<boolean>(this.apiUrl);
   }
 }

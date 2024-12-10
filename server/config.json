@@ -1,29 +1,59 @@
 {
-  "maxTicketCapacity": 120,
-  "totalNumberOfTickets": 0,
-  "ticketRetrivalRate": 3,
-  "ticketReleaseRate": 2,
-  "numOfVendors": 4,
-  "numOfCustomers": 4,
+  "maxTicketCapacity": 20,
+  "totalNumberOfTickets": 20,
+  "ticketRetrivalRate": 4,
+  "ticketReleaseRate": 10,
+  "numOfVendors": 10,
+  "numOfCustomers": 7,
   "listOfVendors": [
     {
       "id": 1,
       "isStopped": false,
-      "releasedTickets": 0
+      "releasedTickets": 3
     },
     {
       "id": 2,
       "isStopped": false,
-      "releasedTickets": 0
+      "releasedTickets": 3
     },
     {
       "id": 3,
       "isStopped": false,
-      "releasedTickets": 0
+      "releasedTickets": 3
     },
     {
       "id": 4,
+      "isStopped": true,
+      "releasedTickets": 3
+    },
+    {
+      "id": 5,
       "isStopped": false,
+      "releasedTickets": 3
+    },
+    {
+      "id": 6,
+      "isStopped": false,
+      "releasedTickets": 3
+    },
+    {
+      "id": 7,
+      "isStopped": true,
+      "releasedTickets": 2
+    },
+    {
+      "id": 8,
+      "isStopped": false,
+      "releasedTickets": 0
+    },
+    {
+      "id": 9,
+      "isStopped": true,
+      "releasedTickets": 0
+    },
+    {
+      "id": 10,
+      "isStopped": true,
       "releasedTickets": 0
     }
   ],
@@ -32,22 +62,40 @@
       "id": 1,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 0
+      "retrivalTickets": 4
     },
     {
       "id": 2,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 0
+      "retrivalTickets": 4
     },
     {
       "id": 3,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 0
+      "retrivalTickets": 4
     },
     {
       "id": 4,
+      "priority": 3,
+      "isStopped": true,
+      "retrivalTickets": 4
+    },
+    {
+      "id": 5,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 4
+    },
+    {
+      "id": 6,
+      "priority": 3,
+      "isStopped": false,
+      "retrivalTickets": 0
+    },
+    {
+      "id": 7,
       "priority": 3,
       "isStopped": false,
       "retrivalTickets": 0

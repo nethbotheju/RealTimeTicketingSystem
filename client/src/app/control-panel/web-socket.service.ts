@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Client, IMessage } from '@stomp/stompjs';
+import { error } from 'console';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -7,32 +8,34 @@ import { Observable, Subject } from 'rxjs';
 })
 export class WebSocketService {
   private stompClient!: Client;
-  private startMessageSubject: Subject<string> = new Subject<string>();
-  private stopMessageSubject: Subject<string> = new Subject<string>();
+
+  private startDataSubject: Subject<string> = new Subject<string>();
+  private stopDataSubject: Subject<string> = new Subject<string>();
 
   constructor() {
     this.stompClient = new Client({
-      brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
-      connectHeaders: {
-        // Optional connection headers if needed
-      },
+      // WebSocket URL
+      brokerURL: 'ws://localhost:8080/ws',
+      connectHeaders: {},
       onConnect: () => {
-        console.log('Connected to WebSocket server');
+        console.log(
+          'Connected to WebSocket server, for recieve start/stop data in control-panel component'
+        );
 
-        // Subscribe to /topic/start/data to receive messages
+        // Subscribe to /topic/start/data to receive start data
         this.stompClient.subscribe('/topic/start/data', (message: IMessage) => {
           console.log('Update from server:', message.body);
-          this.startMessageSubject.next(message.body); // Emit message to subscribers
+          this.startDataSubject.next(message.body); // Emit message to subscribers
         });
 
-        // Subscribe to /topic/start/data to receive messages
+        // Subscribe to /topic/stop/data to receive stop data
         this.stompClient.subscribe('/topic/stop/data', (message: IMessage) => {
           console.log('Update from server:', message.body);
-          this.stopMessageSubject.next(message.body); // Emit message to subscribers
+          this.stopDataSubject.next(message.body); // Emit message to subscribers
         });
       },
       onStompError: (frame) => {
-        console.error('STOMP error:', frame);
+        console.error('Control-panel component STOMP error:', frame);
       },
       onDisconnect: () => {
         console.log('Disconnected from WebSocket server');
@@ -52,12 +55,13 @@ export class WebSocketService {
     }
   }
 
-  // Observable to listen for messages from the server
-  getStartMessages(): Observable<string> {
-    return this.startMessageSubject.asObservable();
+  // Observable to listen for start data from the server
+  getStartData(): Observable<string> {
+    return this.startDataSubject.asObservable();
   }
 
-  getStopMessages(): Observable<string> {
-    return this.stopMessageSubject.asObservable();
+  // Observable to listen for stop data from the server
+  getStopData(): Observable<string> {
+    return this.stopDataSubject.asObservable();
   }
 }
