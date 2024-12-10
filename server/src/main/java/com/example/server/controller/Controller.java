@@ -76,7 +76,7 @@ public class Controller {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping("/loadConfig")
+    @GetMapping("/loadConfig/")
     public String returnConfigFrontend() throws FileNotFoundException {
 
         return ConfigTasks.loadConfigFrontend();
@@ -86,7 +86,7 @@ public class Controller {
     @PostMapping("/updateConfig/")
     public String updateConfigFrontend(@RequestBody String jsonString) throws ParseException {
         ConfigTasks.updateConfig(jsonString);
-        return "Updated SuccessFully";
+        return "Updated configuration saved to config.json";
     }
 
     @CrossOrigin(origins = "http://localhost:4200")

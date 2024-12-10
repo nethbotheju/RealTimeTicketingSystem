@@ -1,5 +1,11 @@
 <div class="flex justify-center items-center h-screen">
   <div
+    *ngIf="Errormessage"
+    class="absolute top-0 mt-4 bg-red-500 text-white p-4 rounded"
+  >
+    <p>{{ Errormessage }}</p>
+  </div>
+  <div
     class="w-[1000px] h-[600px] border-black border-2 rounded-3xl m-10 mx-auto my-auto"
   >
     <h1 class="text-[36px] mt-8 ml-[350px]">Configuration Form</h1>
@@ -70,7 +76,7 @@
             />
           </div>
           <div>
-            <label for="numOfVendors" class="text-[24px]"
+            <label for="numOfCustomers" class="text-[24px]"
               >Number of Customers</label
             >
             <input

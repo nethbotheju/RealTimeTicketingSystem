@@ -1,5 +1,6 @@
 package com.example.server.model;
 
+import com.example.server.ServerSocketCLI;
 import com.example.server.config.DatabaseSetup;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,7 +58,7 @@ public class ConfigTasks {
         try (FileWriter writer = new FileWriter("config.json")) {
             Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
             prettyGson.toJson(config, writer); // Serialize and write to file
-            System.out.println("JSON saved to config.json");
+            ServerSocketCLI.sendMessage("Updated configuration saved to config.json.");
         } catch (IOException e) {
             System.err.println("Error saving JSON: " + e.getMessage());
         }
@@ -71,7 +72,7 @@ public class ConfigTasks {
         Configuration config = null;
         try (FileReader reader = new FileReader("config.json")) {
             config = gson.fromJson(reader, Configuration.class);
-            System.out.println("JSON loaded from config.json");
+            ServerSocketCLI.sendMessage("Loaded Configuration from config.json to backend system.");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -81,6 +82,7 @@ public class ConfigTasks {
     public static String loadConfigFrontend() throws FileNotFoundException {
         Gson gson = new Gson();
         Configuration config = loadConfigSystem();
+        ServerSocketCLI.sendMessage("Loaded Configuration from config.json to frontend.");
         return gson.toJson(config);
     }
 

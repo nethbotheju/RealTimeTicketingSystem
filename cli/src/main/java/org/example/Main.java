@@ -49,7 +49,7 @@ public class Main {
         }
 
         while (true) {
-            System.out.print("\nCustomer retrieval rate (per second): ");
+            System.out.print("\nCustomer retrieval rate (per 10 second): ");
             if (scanner.hasNextInt()) {
                 customerRetrievalRate = scanner.nextInt();
                 break;
@@ -60,7 +60,7 @@ public class Main {
         }
 
         while (true) {
-            System.out.print("\nTicket Release rate (per second): ");
+            System.out.print("\nTicket Release rate (per 10 second): ");
             if (scanner.hasNextInt()) {
                 ticketReleaseRate = scanner.nextInt();
                 break;
@@ -101,7 +101,7 @@ public class Main {
         jsonObject.put("numOfCustomers", noOfCustomers);
 
         HttpRequest.configHttp(jsonObject.toString());
-        System.out.println("Configuration parameters are collected properly and updated!");
+
 
         try {
             socket = new Socket("localhost", 1234);

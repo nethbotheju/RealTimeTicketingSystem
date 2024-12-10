@@ -76,10 +76,14 @@ public class HttpRequest {
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
                 .thenAccept(responseBody -> {
-                    // Process the response body
                     System.out.println("Response: " + responseBody);
                 }).exceptionally(e -> {
-                    System.err.println("Request failed: " + e.getMessage());
+                    if(e.getCause() instanceof java.net.ConnectException){
+                        System.out.println("\n Unable to connect to server. Make sure server is running.");
+                    }else{
+                        System.err.println("HTTP Request failed: " + e.getMessage());
+                    }
+
                     return null;
                 })
                 .join(); // Wait for the async task to complete

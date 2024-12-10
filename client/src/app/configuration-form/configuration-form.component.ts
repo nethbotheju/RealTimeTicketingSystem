@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-configuration-form',
   standalone: true,
+  // FormsModule: ngModel, CommonModule: NgIf, NgFor
   imports: [FormsModule, CommonModule],
   templateUrl: './configuration-form.component.html',
   styleUrl: './configuration-form.component.css',
@@ -22,16 +23,18 @@ export class ConfigurationFormComponent {
 
   customers: { id: number; priority: string }[] = [];
 
+  Errormessage: string = '';
+
   ngOnInit() {
     this.fetchConfigurationData();
   }
 
   fetchConfigurationData() {
-    const apiUrl = 'http://localhost:8080/api/loadConfig';
+    const apiUrl = 'http://localhost:8080/api/loadConfig/';
 
     this.http.get(apiUrl).subscribe(
       (response: any) => {
-        // Extract and store necessary values from the response
+        // Extract and store values from the response
         this.maximumTicketCapacity = response.maxTicketCapacity;
         this.totalNumberOfTickets = response.totalNumberOfTickets;
         this.ticketReleaseRate = response.ticketReleaseRate;
@@ -39,14 +42,20 @@ export class ConfigurationFormComponent {
         this.numOfVendors = response.numOfVendors;
         this.numOfCustomers = response.numOfCustomers;
 
-        // Update customers
+        // Update customers priority table
         this.customers = response.listOfCustomers.map((customer: any) => ({
           id: customer.id,
-          priority: customer.priority.toString(), // Convert to string if needed
+          priority: customer.priority.toString(),
         }));
       },
       (error) => {
-        console.error('Error fetching configuration data:', error);
+        if (error.status === 0) {
+          this.Errormessage =
+            'Unable to connect to the backend server. Please ensure the backend is running and try again.';
+        } else {
+          this.Errormessage =
+            'Error fetching configuration data: ' + error.message;
+        }
       }
     );
   }
@@ -57,7 +66,7 @@ export class ConfigurationFormComponent {
       const existing = this.customers.find((cust) => cust.id === i);
       newCustomers.push({
         id: i,
-        priority: '3',
+        priority: existing ? existing.priority : '3',
       });
     }
     this.customers = newCustomers;
@@ -90,7 +99,13 @@ export class ConfigurationFormComponent {
         this.navigateToHome();
       },
       (error) => {
-        console.error('Error occurred:', error);
+        if (error.status === 0) {
+          this.Errormessage =
+            'Unable to connect to the backend server. Please ensure the backend is running and try again.';
+        } else {
+          this.Errormessage =
+            'Error submitting configuration data: ' + error.message;
+        }
       }
     );
   }
