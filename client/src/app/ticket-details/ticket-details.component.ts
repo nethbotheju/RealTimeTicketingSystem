@@ -20,8 +20,6 @@ export class TicketDetailsComponent implements OnInit {
 
   update(): void {
     this.ticketAvailWebSocket.getTicketAvail().subscribe((message) => {
-      console.log('Received update from server:', message);
-
       const num = JSON.parse(message);
       this.noOfTickets = num;
     });

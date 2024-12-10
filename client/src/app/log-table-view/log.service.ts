@@ -12,20 +12,19 @@ export class LogWebSocket {
   constructor() {
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
-      connectHeaders: {
-        // Optional connection headers if needed
-      },
+      connectHeaders: {},
       onConnect: () => {
-        console.log('Connected to WebSocket server');
+        console.log(
+          'Connected to WebSocket server, for recieve logg data in log-table-view component'
+        );
 
-        // Subscribe to /topic/start/data to receive messages
+        // Subscribe to /topic/log to receive loggs
         this.stompClient.subscribe('/topic/log', (message: IMessage) => {
-          console.log('Update from server:', message.body);
-          this.MessageSubject.next(message.body); // Emit message to subscribers
+          this.MessageSubject.next(message.body);
         });
       },
       onStompError: (frame) => {
-        console.error('STOMP error:', frame);
+        console.error('Log-table-view component STOMP error:', frame);
       },
       onDisconnect: () => {
         console.log('Disconnected from WebSocket server');

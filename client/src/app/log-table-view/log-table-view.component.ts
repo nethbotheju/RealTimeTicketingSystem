@@ -22,8 +22,6 @@ export class LogTableViewComponent implements OnInit {
 
   private add(): void {
     this.logWebSocket.getLogMessages().subscribe((message) => {
-      console.log('Received update from server:', message);
-
       const parsedMessage = JSON.parse(message);
       this.logs.unshift({
         level: parsedMessage.level,

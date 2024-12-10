@@ -48,7 +48,6 @@ export class ControlPanelComponent implements OnInit {
   // WebSocket listener to update vendors and customers dynamically
   private listenForUpdates(): void {
     this.webSocketService.getStartData().subscribe((message) => {
-      console.log('Received update from server:', message);
       // Parse the message
       const parsedMessage = JSON.parse(message);
 
@@ -64,8 +63,6 @@ export class ControlPanelComponent implements OnInit {
     });
 
     this.webSocketService.getStopData().subscribe((message) => {
-      console.log('Recive message from stop: ' + message);
-
       this.vendors = [];
       this.customers = [];
 

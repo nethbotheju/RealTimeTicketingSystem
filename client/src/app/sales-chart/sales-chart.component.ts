@@ -58,6 +58,7 @@ export class SalesChartComponent implements OnInit {
     private http: HttpClient
   ) {}
   chart: any;
+
   ngOnInit(): void {
     this.chart = new Chart('TicketSales', this.config);
     this.salesWebSocket.connect();
@@ -66,21 +67,16 @@ export class SalesChartComponent implements OnInit {
 
   private add(): void {
     this.salesWebSocket.getSales().subscribe((message) => {
-      console.log('Received update from server:', message);
-
       const sale = JSON.parse(message);
       const dateIndex = this.chart.data.labels?.indexOf(sale.date) ?? -1;
 
       if (dateIndex === -1) {
-        // New date, add to labels and data
         this.chart.data.labels.push(sale.date);
         this.chart.data.datasets[0].data.push(sale.count);
       } else {
-        // Existing date, update the count
         this.chart.data.datasets[0].data[dateIndex] += sale.count;
       }
 
-      // Trigger chart update
       this.chart.update();
     });
   }

@@ -7,25 +7,25 @@ import { Observable, Subject } from 'rxjs';
 })
 export class SalesWebSocket {
   private stompClient!: Client;
-  private MessageSubject: Subject<string> = new Subject<string>();
+
+  private salesDataSubject: Subject<string> = new Subject<string>();
 
   constructor() {
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
-      connectHeaders: {
-        // Optional connection headers if needed
-      },
+      connectHeaders: {},
       onConnect: () => {
-        console.log('Connected to WebSocket server');
+        console.log(
+          'Connected to WebSocket server, for recieve real time sales data in sales-chart component'
+        );
 
-        // Subscribe to /topic/start/data to receive messages
+        // Subscribe to /topic/sales to receive real time sales
         this.stompClient.subscribe('/topic/sales', (message: IMessage) => {
-          console.log('Update from server:', message.body);
-          this.MessageSubject.next(message.body); // Emit message to subscribers
+          this.salesDataSubject.next(message.body); // Emit message to subscribers
         });
       },
       onStompError: (frame) => {
-        console.error('STOMP error:', frame);
+        console.error('Sales-panel component STOMP error:', frame);
       },
       onDisconnect: () => {
         console.log('Disconnected from WebSocket server');
@@ -45,8 +45,8 @@ export class SalesWebSocket {
     }
   }
 
-  // Observable to listen for messages from the server
+  // Observable to listen for real time sales data from the server
   getSales(): Observable<string> {
-    return this.MessageSubject.asObservable();
+    return this.salesDataSubject.asObservable();
   }
 }
