@@ -14,6 +14,10 @@ export class WebSocketService {
   constructor() {}
 
   initialize(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
+
     this.stompClient = new Client({
       // WebSocket URL
       brokerURL: 'ws://localhost:8080/ws',
@@ -44,6 +48,9 @@ export class WebSocketService {
 
   // Method to activate the WebSocket connection
   connect(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.stompClient.activate();
   }
 

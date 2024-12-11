@@ -13,6 +13,9 @@ export class SalesWebSocket {
   constructor() {}
 
   initialize(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
       connectHeaders: {},
@@ -36,6 +39,9 @@ export class SalesWebSocket {
 
   // Method to activate the WebSocket connection
   connect(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.stompClient.activate();
   }
 

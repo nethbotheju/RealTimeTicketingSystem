@@ -12,6 +12,9 @@ export class TicketAvailWebsocket {
   constructor() {}
 
   initialize(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
       connectHeaders: {
@@ -41,6 +44,9 @@ export class TicketAvailWebsocket {
 
   // Method to activate the WebSocket connection
   connect(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.stompClient.activate();
   }
 
