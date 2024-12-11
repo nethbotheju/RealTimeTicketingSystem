@@ -61,7 +61,7 @@ export class SalesChartComponent implements OnInit {
 
   ngOnInit(): void {
     this.chart = new Chart('TicketSales', this.config);
-    this.salesWebSocket.close();
+    this.salesWebSocket.initialize();
     this.salesWebSocket.connect();
     this.add();
   }

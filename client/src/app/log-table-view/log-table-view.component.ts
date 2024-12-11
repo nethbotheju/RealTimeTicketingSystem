@@ -16,7 +16,7 @@ export class LogTableViewComponent implements OnInit {
   constructor(private logWebSocket: LogWebSocket) {}
 
   ngOnInit(): void {
-    this.logWebSocket.close();
+    this.logWebSocket.initialize();
     this.logWebSocket.connect();
     this.add();
   }

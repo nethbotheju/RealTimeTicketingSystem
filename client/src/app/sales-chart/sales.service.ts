@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Observable, Subject } from 'rxjs';
 
@@ -10,7 +10,9 @@ export class SalesWebSocket {
 
   private salesDataSubject: Subject<string> = new Subject<string>();
 
-  constructor(private zone: NgZone) {
+  constructor() {}
+
+  initialize(): void {
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
       connectHeaders: {},
@@ -18,14 +20,9 @@ export class SalesWebSocket {
         console.log(
           'Connected to WebSocket server, for recieve real time sales data in sales-chart component'
         );
-
-        this.zone.runOutsideAngular(() => {
-          // Subscribe to /topic/sales to receive real time sales
-          this.stompClient.subscribe('/topic/sales', (message: IMessage) => {
-            this.zone.run(() => {
-              this.salesDataSubject.next(message.body); // Emit message to subscribers
-            });
-          });
+        // Subscribe to /topic/sales to receive real time sales
+        this.stompClient.subscribe('/topic/sales', (message: IMessage) => {
+          this.salesDataSubject.next(message.body); // Emit message to subscribers
         });
       },
       onStompError: (frame) => {

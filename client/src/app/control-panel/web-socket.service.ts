@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Observable, Subject } from 'rxjs';
 
@@ -11,7 +11,9 @@ export class WebSocketService {
   private startDataSubject: Subject<string> = new Subject<string>();
   private stopDataSubject: Subject<string> = new Subject<string>();
 
-  constructor(private zone: NgZone) {
+  constructor() {}
+
+  initialize(): void {
     this.stompClient = new Client({
       // WebSocket URL
       brokerURL: 'ws://localhost:8080/ws',
@@ -21,26 +23,14 @@ export class WebSocketService {
           'Connected to WebSocket server, for recieve start/stop data in control-panel component'
         );
 
-        this.zone.runOutsideAngular(() => {
-          // Subscribe to /topic/start/data to receive start data
-          this.stompClient.subscribe(
-            '/topic/start/data',
-            (message: IMessage) => {
-              this.zone.run(() => {
-                this.startDataSubject.next(message.body); // Emit message to subscribers
-              });
-            }
-          );
+        // Subscribe to /topic/start/data to receive start data
+        this.stompClient.subscribe('/topic/start/data', (message: IMessage) => {
+          this.startDataSubject.next(message.body); // Emit message to subscribers
+        });
 
-          // Subscribe to /topic/stop/data to receive stop data
-          this.stompClient.subscribe(
-            '/topic/stop/data',
-            (message: IMessage) => {
-              this.zone.run(() => {
-                this.stopDataSubject.next(message.body); // Emit message to subscribers
-              });
-            }
-          );
+        // Subscribe to /topic/stop/data to receive stop data
+        this.stompClient.subscribe('/topic/stop/data', (message: IMessage) => {
+          this.stopDataSubject.next(message.body); // Emit message to subscribers
         });
       },
       onStompError: (frame) => {

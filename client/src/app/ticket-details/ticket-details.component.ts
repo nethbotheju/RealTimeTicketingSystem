@@ -14,7 +14,7 @@ export class TicketDetailsComponent implements OnInit {
   constructor(private ticketAvailWebSocket: TicketAvailWebsocket) {}
 
   ngOnInit(): void {
-    this.ticketAvailWebSocket.close();
+    this.ticketAvailWebSocket.initialize();
     this.ticketAvailWebSocket.connect();
     this.update();
   }
