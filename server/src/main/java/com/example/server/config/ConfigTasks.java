@@ -1,6 +1,5 @@
 package com.example.server.config;
 
-import com.example.server.database.DatabaseSetup;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.json.simple.JSONArray;
@@ -8,7 +7,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -60,9 +58,9 @@ public class ConfigTasks {
         }
     }
 
-    public static Configuration loadConfigSystem() throws FileNotFoundException {
+    public static Configuration loadConfigSystem() {
         Gson gson = new Gson();
-        Configuration config = null;
+        Configuration config;
         try (FileReader reader = new FileReader("config.json")) {
             config = gson.fromJson(reader, Configuration.class);
         } catch (IOException e) {
@@ -71,14 +69,13 @@ public class ConfigTasks {
         return config;
     }
 
-    public static String loadConfigFrontend() throws FileNotFoundException {
+    public static String loadConfigFrontend(){
         Gson gson = new Gson();
         Configuration config = loadConfigSystem();
         return gson.toJson(config);
     }
 
-    public static void saveConfigSystem(Configuration config) throws FileNotFoundException {
-        Gson gson = new Gson();
+    public static void saveConfigSystem(Configuration config){
         // Save the Config object to a JSON file
         try (FileWriter writer = new FileWriter("config.json")) {
             Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
@@ -88,7 +85,7 @@ public class ConfigTasks {
         }
     }
 
-    public static void resetConfigSystem() throws FileNotFoundException {
+    public static void resetConfigSystem(){
         Configuration config = loadConfigSystem();
         config.setTotalNumberOfTickets(0);
         for (ConfigCustomer configCustomer : config.getListOfCustomers()){

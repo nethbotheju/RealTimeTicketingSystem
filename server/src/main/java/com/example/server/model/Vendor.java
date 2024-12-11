@@ -18,7 +18,7 @@ public class Vendor implements Runnable {
     private int releaseTicketCount;
 
 
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     private static final Logger logger = LogConfig.logger;
     private final ReentrantLock lock = new ReentrantLock();

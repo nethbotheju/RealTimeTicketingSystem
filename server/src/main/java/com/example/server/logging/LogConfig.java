@@ -15,7 +15,7 @@ public class LogConfig {
             logger.addHandler(fileHandler);
             logger.setUseParentHandlers(false); // Disable console logging
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }

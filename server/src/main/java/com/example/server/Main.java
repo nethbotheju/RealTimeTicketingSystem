@@ -7,9 +7,7 @@ import com.example.server.model.*;
 
 import com.example.server.webSockets.LogController;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -41,7 +39,7 @@ public class Main {
 
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
-    public static String start() throws FileNotFoundException {
+    public static String start(){
 
         config = ConfigTasks.loadConfigSystem();
         ServerSocketCLI.sendMessage("Loaded Configuration from config.json to backend system.");
@@ -101,7 +99,7 @@ public class Main {
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 return "{}"; // Return empty JSON in case of an error
             }
     }
@@ -132,7 +130,7 @@ public class Main {
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 return "{}"; // Return empty JSON in case of an error
             }
         }
@@ -164,7 +162,7 @@ public class Main {
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 return "{}"; // Return empty JSON in case of an error
             }
         }
@@ -201,7 +199,7 @@ public class Main {
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 return "{}"; // Return empty JSON in case of an error
             }
         }
@@ -238,14 +236,14 @@ public class Main {
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 return "{}"; // Return empty JSON in case of an error
             }
         }
         return null;
     }
 
-    public static void stop() throws FileNotFoundException {
+    public static void stop(){
         isProgramStopped = true;
         isProgramStarted = false;
 
@@ -289,10 +287,10 @@ public class Main {
         LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
     }
 
-    public static void reset() throws FileNotFoundException {
+    public static void reset(){
         ConfigTasks.resetConfigSystem();
-        System.out.println("System Configuration saved to config.json");
-        LogConfig.logger.info("System Configuration saved to config.json");
+        LogConfig.logger.info("Configuration rested and saved to config.json");
+        ServerSocketCLI.sendMessage("Configuration rested and saved to config.json");
 
         String message = "Program rested Successfully";
         logger.info(message);

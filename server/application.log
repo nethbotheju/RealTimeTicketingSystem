@@ -1912,3 +1912,411 @@ Dec 12, 2024 12:47:41 AM com.example.server.model.TicketPool removeTicket
 INFO: Program stopped. So customer 2 stopped.
 Dec 12, 2024 12:47:41 AM com.example.server.model.TicketPool removeTicket
 INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 3:58:21 AM com.example.server.controller.Controller updateConfigFrontend
+INFO: Updated configuration saved to config.json.
+Dec 12, 2024 3:58:21 AM com.example.server.cli.ServerSocketCLI$1 run
+INFO: CLI Client is connected to the backend server.
+Dec 12, 2024 3:58:26 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 3:58:26 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 3:58:26 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:26 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:26 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:26 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:31 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:31 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:31 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:31 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:36 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:36 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:36 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:36 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:41 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:41 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:58:41 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:41 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:58:44 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 3:58:44 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 3:58:46 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Dec 12, 2024 3:58:46 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Dec 12, 2024 3:58:46 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 2 stopped.
+Dec 12, 2024 3:58:46 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 3:59:04 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 3:59:04 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:04 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 3:59:04 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:04 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:04 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:09 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:09 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:09 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:09 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:14 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:14 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:14 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:14 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:19 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:19 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:19 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:19 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:24 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:24 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:24 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:24 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:29 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:29 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 3:59:29 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:29 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 3:59:34 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 1. Stopping further releases.
+Dec 12, 2024 3:59:34 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 2. Stopping further releases.
+Dec 12, 2024 3:59:34 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 2. Stopping buying tickets.
+Dec 12, 2024 3:59:34 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 1. Stopping buying tickets.
+Dec 12, 2024 3:59:45 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 3:59:45 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:00:39 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:00:39 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 1. Stopping further releases.
+Dec 12, 2024 4:00:39 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 2. Stopping further releases.
+Dec 12, 2024 4:00:39 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 1. Stopping buying tickets.
+Dec 12, 2024 4:00:39 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:00:39 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 2. Stopping buying tickets.
+Dec 12, 2024 4:00:48 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:00:48 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:00:50 AM com.example.server.Main reset
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:00:50 AM com.example.server.Main reset
+INFO: Program rested Successfully
+Dec 12, 2024 4:01:05 AM com.example.server.Main reset
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:01:05 AM com.example.server.Main reset
+INFO: Program rested Successfully
+Dec 12, 2024 4:01:18 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:01:18 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:18 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:01:18 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:18 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:18 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:22 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:01:22 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:01:23 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Dec 12, 2024 4:01:23 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Dec 12, 2024 4:01:23 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 4:01:23 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 2 stopped.
+Dec 12, 2024 4:01:25 AM com.example.server.Main reset
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:01:25 AM com.example.server.Main reset
+INFO: Program rested Successfully
+Dec 12, 2024 4:01:32 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.
+Dec 12, 2024 4:01:37 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:01:37 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:37 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:01:37 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:37 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:37 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:41 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:01:41 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:01:42 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Dec 12, 2024 4:01:42 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 4:01:42 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Dec 12, 2024 4:01:42 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 2 stopped.
+Dec 12, 2024 4:01:42 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.
+Dec 12, 2024 4:01:47 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:01:47 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:47 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:01:47 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:47 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:47 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:52 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:52 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:01:52 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:52 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:01:56 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:01:56 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:01:57 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Dec 12, 2024 4:01:57 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 4:01:57 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 2 stopped.
+Dec 12, 2024 4:01:57 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Dec 12, 2024 4:01:57 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.
+Dec 12, 2024 4:02:00 AM com.example.server.Main reset
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:02:00 AM com.example.server.Main reset
+INFO: Program rested Successfully
+Dec 12, 2024 4:02:02 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.
+Dec 12, 2024 4:02:05 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:02:05 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:02:05 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:02:05 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:02:05 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:02:05 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:02:07 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:02:07 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:02:10 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 1 stopped.
+Dec 12, 2024 4:02:10 AM com.example.server.model.Vendor run
+INFO: Program stopped. So vendor 2 stopped.
+Dec 12, 2024 4:02:10 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 1 stopped.
+Dec 12, 2024 4:02:10 AM com.example.server.model.TicketPool removeTicket
+INFO: Program stopped. So customer 2 stopped.
+Dec 12, 2024 4:02:25 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.
+Dec 12, 2024 4:02:36 AM com.example.server.controller.Controller updateConfigFrontend
+INFO: Updated configuration saved to config.json.
+Dec 12, 2024 4:05:57 AM com.example.server.Main start
+INFO: Loaded Configuration from config.json to backend system.
+Dec 12, 2024 4:05:57 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:05:57 AM com.example.server.Main start
+INFO: Program started Successfully
+Dec 12, 2024 4:05:57 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:05:57 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 5 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:05:57 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:02 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:02 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:02 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:02 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:06 AM com.example.server.Main addVendor
+INFO: Vendor 3 successfully added to the vendor list.
+Dec 12, 2024 4:06:06 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:06 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.Main addVendor
+INFO: Vendor 4 successfully added to the vendor list.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:07 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:09 AM com.example.server.Main addVendor
+INFO: Vendor 5 successfully added to the vendor list.
+Dec 12, 2024 4:06:09 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 5 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:09 AM com.example.server.Main addVendor
+INFO: Vendor 6 successfully added to the vendor list.
+Dec 12, 2024 4:06:09 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 6 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:11 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.Main addVendor
+INFO: Vendor 7 successfully added to the vendor list.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 7 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 1 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 2 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:12 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:14 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 5 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:14 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 6 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:14 AM com.example.server.Main addVendor
+INFO: Vendor 8 successfully added to the vendor list.
+Dec 12, 2024 4:06:14 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 8 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:16 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 3 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.model.TicketPool addTickets
+INFO: Vendor 4 successfully added a ticket to the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 7. Stopping further releases.
+Dec 12, 2024 4:06:17 AM com.example.server.Main addVendor
+INFO: Vendor 9 successfully added to the vendor list.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 9. Stopping further releases.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 1. Stopping further releases.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 2. Stopping further releases.
+Dec 12, 2024 4:06:17 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 1 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:17 AM com.example.server.Main addVendor
+INFO: Vendor 10 successfully added to the vendor list.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 10. Stopping further releases.
+Dec 12, 2024 4:06:17 AM com.example.server.Main addVendor
+INFO: Vendor 11 successfully added to the vendor list.
+Dec 12, 2024 4:06:17 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 11. Stopping further releases.
+Dec 12, 2024 4:06:19 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 5. Stopping further releases.
+Dec 12, 2024 4:06:19 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 6. Stopping further releases.
+Dec 12, 2024 4:06:19 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 8. Stopping further releases.
+Dec 12, 2024 4:06:21 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 3. Stopping further releases.
+Dec 12, 2024 4:06:22 AM com.example.server.model.Vendor run
+INFO: Total number of tickets released has reached the limit for Vendor 4. Stopping further releases.
+Dec 12, 2024 4:06:22 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 4 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:22 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 3 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:22 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:27 AM com.example.server.model.TicketPool removeTicket
+INFO: Customer 2 successfully removed a ticket from the TicketPool.
+Dec 12, 2024 4:06:27 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 4. Stopping buying tickets.
+Dec 12, 2024 4:06:27 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 3. Stopping buying tickets.
+Dec 12, 2024 4:06:27 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 1. Stopping buying tickets.
+Dec 12, 2024 4:06:27 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 5. Stopping buying tickets.
+Dec 12, 2024 4:06:32 AM com.example.server.model.TicketPool removeTicket
+INFO: Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer 2. Stopping buying tickets.
+Dec 12, 2024 4:06:36 AM com.example.server.Main stop
+INFO: System Configuration saved to config.json
+Dec 12, 2024 4:06:36 AM com.example.server.Main stop
+INFO: Program stopped Successfully
+Dec 12, 2024 4:06:37 AM com.example.server.Main reset
+INFO: Configuration rested and saved to config.json
+Dec 12, 2024 4:06:37 AM com.example.server.Main reset
+INFO: Program rested Successfully
+Dec 12, 2024 4:06:40 AM com.example.server.controller.Controller returnConfigFrontend
+INFO: Loaded Configuration from config.json to frontend.

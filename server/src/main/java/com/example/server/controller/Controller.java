@@ -9,8 +9,6 @@ import org.json.simple.parser.ParseException;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.FileNotFoundException;
-
 @RestController
 @RequestMapping("/api")
 public class Controller {
@@ -23,7 +21,7 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/start")
-    public Boolean start() throws FileNotFoundException {
+    public Boolean start(){
         // Fetch past sales data and send to the frontend
         DatabaseSetup.fetchSales();
 
@@ -40,7 +38,7 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/stop")
-    public Boolean stop() throws FileNotFoundException {
+    public Boolean stop(){
         Main.stop();
 
         // Send customers and vendors data using websocket
@@ -55,34 +53,30 @@ public class Controller {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/addVendor")
     public String addv() {
-        String result = Main.addVendor();
-        return result;
+        return Main.addVendor();
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/addCustomer/{priority}")
     public String addc(@PathVariable("priority") int priority) {
-        String result = Main.addCustomer(priority);
-        return result;
+        return Main.addCustomer(priority);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/removeVendor/{id}")
     public String removeVendor(@PathVariable int id) {
-        String result = Main.removeVendor(id);
-        return result;
+        return Main.removeVendor(id);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/removeCustomer/{id}")
     public String removeCustomer(@PathVariable int id) {
-        String result = Main.removeCustomer(id);
-        return result;
+        return Main.removeCustomer(id);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/loadConfig/")
-    public String returnConfigFrontend() throws FileNotFoundException {
+    public String returnConfigFrontend(){
         ServerSocketCLI.sendMessage("Loaded Configuration from config.json to frontend.");
         LogConfig.logger.info("Loaded Configuration from config.json to frontend.");
 
@@ -105,7 +99,7 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/reset")
-    public Boolean reset() throws FileNotFoundException {
+    public Boolean reset(){
         Main.reset();
 
         // Delete past sales data in the database

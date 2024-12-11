@@ -5,7 +5,6 @@ import com.example.server.webSockets.SalesController;
 import com.example.server.model.Sale;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class DatabaseSetup {
     private static Connection connection;
@@ -44,9 +43,7 @@ public class DatabaseSetup {
         String sql = "SELECT * FROM sales";
 
         try(Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);){
-
-            ArrayList<Sale> sales = new ArrayList<>();
+            ResultSet rs = stmt.executeQuery(sql)){
 
             while (rs.next()){
                 SalesController.sendToFrontendSale(new Sale(rs.getString("date"), rs.getInt("count")));

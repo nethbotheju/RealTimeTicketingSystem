@@ -2,8 +2,6 @@ package com.example.server.model;
 
 import com.example.server.logging.LogConfig;
 
-import java.time.format.DateTimeFormatter;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
 public class Customer implements Runnable {
@@ -15,11 +13,7 @@ public class Customer implements Runnable {
 
     private int boughtTickets;
 
-
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
-
     private static final Logger logger = LogConfig.logger;
-    private final ReentrantLock lock = new ReentrantLock();
 
     public Customer(int customerId, int customerRetrivalRate, TicketPool ticketPool, int priority, boolean isCustomerStopped, int boughtTickets) {
         this.customerId = customerId;
