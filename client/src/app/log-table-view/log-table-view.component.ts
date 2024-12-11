@@ -16,6 +16,7 @@ export class LogTableViewComponent implements OnInit {
   constructor(private logWebSocket: LogWebSocket) {}
 
   ngOnInit(): void {
+    this.logWebSocket.close();
     this.logWebSocket.connect();
     this.add();
   }
@@ -29,5 +30,9 @@ export class LogTableViewComponent implements OnInit {
         timestamp: parsedMessage.timestamp,
       });
     });
+  }
+
+  ngOnDestroy(): void {
+    this.logWebSocket.close();
   }
 }

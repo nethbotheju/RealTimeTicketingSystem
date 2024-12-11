@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Observable, Subject } from 'rxjs';
 
@@ -9,7 +9,7 @@ export class TicketAvailWebsocket {
   private stompClient!: Client;
   private MessageSubject: Subject<string> = new Subject<string>();
 
-  constructor() {
+  constructor(private zone: NgZone) {
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
       connectHeaders: {
@@ -20,13 +20,17 @@ export class TicketAvailWebsocket {
           'Connected to WebSocket server, for recieve real time ticket data in ticket-details component'
         );
 
-        // Subscribe to /topic/start/data to receive messages
-        this.stompClient.subscribe(
-          '/topic/ticketAvail',
-          (message: IMessage) => {
-            this.MessageSubject.next(message.body); // Emit message to subscribers
-          }
-        );
+        this.zone.runOutsideAngular(() => {
+          // Subscribe to /topic/start/data to receive messages
+          this.stompClient.subscribe(
+            '/topic/ticketAvail',
+            (message: IMessage) => {
+              this.zone.run(() => {
+                this.MessageSubject.next(message.body); // Emit message to subscribers
+              });
+            }
+          );
+        });
       },
       onStompError: (frame) => {
         console.error('Ticket-details component STOMP error:', frame);

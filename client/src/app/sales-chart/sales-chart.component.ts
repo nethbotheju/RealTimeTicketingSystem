@@ -61,6 +61,7 @@ export class SalesChartComponent implements OnInit {
 
   ngOnInit(): void {
     this.chart = new Chart('TicketSales', this.config);
+    this.salesWebSocket.close();
     this.salesWebSocket.connect();
     this.add();
   }
@@ -85,5 +86,10 @@ export class SalesChartComponent implements OnInit {
     this.chart.data.labels = [];
     this.chart.data.datasets[0].data = [];
     this.chart.update();
+  }
+
+  // Cleanup on component destruction
+  ngOnDestroy(): void {
+    this.salesWebSocket.close();
   }
 }

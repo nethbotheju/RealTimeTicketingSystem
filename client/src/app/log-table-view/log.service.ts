@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Observable, Subject } from 'rxjs';
 
@@ -9,7 +9,7 @@ export class LogWebSocket {
   private stompClient!: Client;
   private MessageSubject: Subject<string> = new Subject<string>();
 
-  constructor() {
+  constructor(private zone: NgZone) {
     this.stompClient = new Client({
       brokerURL: 'ws://localhost:8080/ws', // WebSocket URL
       connectHeaders: {},
@@ -18,9 +18,13 @@ export class LogWebSocket {
           'Connected to WebSocket server, for recieve logg data in log-table-view component'
         );
 
-        // Subscribe to /topic/log to receive loggs
-        this.stompClient.subscribe('/topic/log', (message: IMessage) => {
-          this.MessageSubject.next(message.body);
+        this.zone.runOutsideAngular(() => {
+          // Subscribe to /topic/log to receive loggs
+          this.stompClient.subscribe('/topic/log', (message: IMessage) => {
+            this.zone.run(() => {
+              this.MessageSubject.next(message.body);
+            });
+          });
         });
       },
       onStompError: (frame) => {

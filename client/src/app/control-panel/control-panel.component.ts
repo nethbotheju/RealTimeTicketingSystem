@@ -41,6 +41,7 @@ export class ControlPanelComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.webSocketService.close();
     this.webSocketService.connect();
     this.listenForUpdates();
   }

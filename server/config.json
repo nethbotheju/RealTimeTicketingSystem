@@ -1,6 +1,6 @@
 {
   "maxTicketCapacity": 23,
-  "totalNumberOfTickets": 23,
+  "totalNumberOfTickets": 13,
   "ticketRetrivalRate": 2,
   "ticketReleaseRate": 4,
   "numOfVendors": 4,
@@ -32,7 +32,7 @@
       "id": 1,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 4
+      "retrivalTickets": 1
     },
     {
       "id": 2,
@@ -50,13 +50,13 @@
       "id": 4,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 4
+      "retrivalTickets": 1
     },
     {
       "id": 5,
       "priority": 1,
       "isStopped": false,
-      "retrivalTickets": 5
+      "retrivalTickets": 1
     }
   ]
 }
