@@ -1,6 +1,7 @@
 package com.example.server.model;
 
 import com.example.server.Main;
+import com.example.server.cli.ServerSocketCLI;
 import com.example.server.database.DatabaseSetup;
 import com.example.server.logging.LogConfig;
 import com.example.server.webSockets.LogController;
@@ -54,6 +55,7 @@ public class TicketPool {
             String message = "Vendor " + ticket.getVendorId() + " successfully added a ticket to the TicketPool.";
             logger.info(message);
             LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
+            ServerSocketCLI.sendMessage(message);
 
 
             notEmpty.signalAll(); // Signal that tickets are available
@@ -91,6 +93,7 @@ public class TicketPool {
                     String message = "Total number of tickets released has reached the limit for Vendor and the ticket pool is empty, so customer " + customer.getCustomerId() + ". Stopping buying tickets.";
                     logger.info(message);
                     LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
+                    ServerSocketCLI.sendMessage(message);
 
                     return null;
                 }
@@ -99,7 +102,7 @@ public class TicketPool {
                     notEmpty.await(); // Wait until tickets become available
                 }
 
-                if (customer.equals(waitingCustomers.peek())) {
+                if (!tickets.isEmpty() && customer.equals(waitingCustomers.peek())) {
                     // Remove a ticket and perform necessary actions
                     Ticket ticket = tickets.remove(0);
                     totalBoughTickets++;
@@ -111,6 +114,7 @@ public class TicketPool {
                     SalesController.sendToFrontendSale(new Sale(dateTime.format(dateFormat), 1));
                     DatabaseSetup.insertIntoSales(dateTime.format(dateFormat), 1);
                     TicketAvailablilityController.sendToFrontendTicketAvail(totalNumberOfTickets - totalBoughTickets);
+                    ServerSocketCLI.sendMessage(message);
 
                     waitingCustomers.poll();
                     return ticket;

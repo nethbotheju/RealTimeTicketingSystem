@@ -34,13 +34,14 @@ public class Customer implements Runnable {
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                    Ticket ticket = ticketPool.removeTicket(this);
-                    if (ticket != null) {
-                        boughtTickets++;
-                    }else{
-                        Thread.currentThread().interrupt();
-                    }
-                Thread.sleep(10000 / customerRetrivalRate); // customer ticket retrieval rate per second
+                Ticket ticket = ticketPool.removeTicket(this);
+                if (ticket != null) {
+                    boughtTickets++;
+                }else{
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+                Thread.sleep(10000 / customerRetrivalRate); // customer ticket retrieval rate per 10 second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 logger.severe("Error: " + e.getMessage());

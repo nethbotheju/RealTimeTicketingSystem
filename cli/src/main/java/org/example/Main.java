@@ -113,7 +113,7 @@ public class Main {
                     try {
                         BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                         String msg;
-                        while ((msg = input.readLine()) != null) {
+                        while (!socket.isClosed() && (msg = input.readLine()) != null) {
                             if (msg.equals("started")) {
                                 started = true;
                                 stopped = false;
@@ -125,7 +125,9 @@ public class Main {
                             }
                         }
                     } catch (IOException e) {
-                        System.out.println("Error : " + e.getMessage());
+                        if (!socket.isClosed()) {
+                            System.out.println("Error : " + e.getMessage());
+                        }
                     }
                 }
             }).start();
@@ -136,35 +138,39 @@ public class Main {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 while (true) {
-                    System.out.print("\nEnter the command: ");
-                    String command = scanner.next(); // Read the user input once
+                    try{
+                        String command = reader.readLine(); // Read the user input once
 
-                    if (command.equals("start")) {
-                        if (!started) {
-                            HttpRequest.startHttp();
-                        } else {
-                            System.out.println("Program already started");
-                        }
-                    } else if (command.equals("stop")) {
-                        if (!stopped) {
-                            HttpRequest.stopHttp();
-                        } else {
-                            System.out.println("Program already stopped");
-                        }
-                    } else if (command.equals("q")) {
-                        System.out.println("CLI Client is stopping .....");
-                        try {
-                            if (socket != null && !socket.isClosed()) {
-                                socket.close();
+                        if (command.equals("start")) {
+                            if (!started) {
+                                HttpRequest.startHttp();
+                            } else {
+                                System.out.println("Program already started");
                             }
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                        } else if (command.equals("stop")) {
+                            if (!stopped) {
+                                HttpRequest.stopHttp();
+                            } else {
+                                System.out.println("Program already stopped");
+                            }
+                        } else if (command.equals("q")) {
+                            System.out.println("CLI Client is stopping .....");
+                            try {
+                                if (socket != null && !socket.isClosed()) {
+                                    socket.close();
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            scanner.close();
+                            System.exit(0);
+                        } else {
+                            System.out.println("Invalid command.");
                         }
-                        scanner.close();
-                        System.exit(0);
-                    } else {
-                        System.out.println("Invalid command.");
+                    } catch (IOException e) {
+                        System.out.println("Error : " + e.getMessage());
                     }
                 }
             }

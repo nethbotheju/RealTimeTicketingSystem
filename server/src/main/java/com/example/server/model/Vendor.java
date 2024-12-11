@@ -1,6 +1,7 @@
 package com.example.server.model;
 
 import com.example.server.Main;
+import com.example.server.cli.ServerSocketCLI;
 import com.example.server.logging.LogConfig;
 import com.example.server.webSockets.LogController;
 
@@ -58,6 +59,7 @@ public class Vendor implements Runnable {
                         String message = "Total number of tickets released has reached the limit for Vendor " + vendorId + ". Stopping further releases.";
                         logger.info(message);
                         LogController.sendToFrontendLog(new LogEntry("Warning", message, LocalDateTime.now().format(formatter)));
+                        ServerSocketCLI.sendMessage(message);
 
                         Thread.currentThread().interrupt();
                         break;
