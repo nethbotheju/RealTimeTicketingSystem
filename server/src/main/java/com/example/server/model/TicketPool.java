@@ -1,28 +1,22 @@
 package com.example.server.model;
 
 import com.example.server.Main;
-import com.example.server.config.DatabaseSetup;
-import com.example.server.config.LogConfig;
-import com.example.server.controller.Controller;
-import com.example.server.controller.LogController;
-import com.example.server.controller.SalesController;
-import com.example.server.controller.TicketAvailablilityController;
+import com.example.server.database.DatabaseSetup;
+import com.example.server.logging.LogConfig;
+import com.example.server.webSockets.LogController;
+import com.example.server.webSockets.SalesController;
+import com.example.server.webSockets.TicketAvailablilityController;
 
-import java.text.DateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.PriorityQueue;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
 import java.util.logging.Logger;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 
 public class TicketPool {

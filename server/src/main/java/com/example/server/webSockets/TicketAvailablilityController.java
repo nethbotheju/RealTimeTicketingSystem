@@ -1,6 +1,5 @@
-package com.example.server.controller;
+package com.example.server.webSockets;
 
-import com.example.server.model.Sale;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +8,7 @@ public class TicketAvailablilityController {
     private static SimpMessagingTemplate messagingTemplate;
 
     public TicketAvailablilityController(SimpMessagingTemplate messagingTemplate) {
-        this.messagingTemplate = messagingTemplate;
+        TicketAvailablilityController.messagingTemplate = messagingTemplate;
     }
 
     public static void sendToFrontendTicketAvail(int message) {

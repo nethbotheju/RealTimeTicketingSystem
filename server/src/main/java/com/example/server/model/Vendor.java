@@ -1,8 +1,8 @@
 package com.example.server.model;
 
 import com.example.server.Main;
-import com.example.server.config.LogConfig;
-import com.example.server.controller.LogController;
+import com.example.server.logging.LogConfig;
+import com.example.server.webSockets.LogController;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

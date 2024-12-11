@@ -1,6 +1,7 @@
 package com.example.server;
 
-import com.example.server.config.DatabaseSetup;
+import com.example.server.cli.ServerSocketCLI;
+import com.example.server.database.DatabaseSetup;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

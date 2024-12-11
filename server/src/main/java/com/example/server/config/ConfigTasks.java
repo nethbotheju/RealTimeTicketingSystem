@@ -1,7 +1,6 @@
-package com.example.server.model;
+package com.example.server.config;
 
-import com.example.server.ServerSocketCLI;
-import com.example.server.config.DatabaseSetup;
+import com.example.server.database.DatabaseSetup;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.json.simple.JSONArray;
@@ -45,12 +44,10 @@ public class ConfigTasks {
             }
         }
 
-
         ConfigVendor[] listOfVendors = new ConfigVendor[numOfVendors];
         for (int i = 0; i < numOfVendors; i++) {
             listOfVendors[i] = new ConfigVendor(i+1);
         }
-
 
         Configuration config = new Configuration(maxTicketCapacity, totalNumberOfTickets, ticketReleaseRate, ticketRetrivalRate, numOfVendors, numOfCustomers, listOfCustomers, listOfVendors);
 
@@ -58,13 +55,9 @@ public class ConfigTasks {
         try (FileWriter writer = new FileWriter("config.json")) {
             Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
             prettyGson.toJson(config, writer); // Serialize and write to file
-            ServerSocketCLI.sendMessage("Updated configuration saved to config.json.");
         } catch (IOException e) {
             System.err.println("Error saving JSON: " + e.getMessage());
         }
-
-        // Delete sales data in the sqlite database
-        DatabaseSetup.deleteAllSales();
     }
 
     public static Configuration loadConfigSystem() throws FileNotFoundException {
@@ -72,7 +65,6 @@ public class ConfigTasks {
         Configuration config = null;
         try (FileReader reader = new FileReader("config.json")) {
             config = gson.fromJson(reader, Configuration.class);
-            ServerSocketCLI.sendMessage("Loaded Configuration from config.json to backend system.");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -82,7 +74,6 @@ public class ConfigTasks {
     public static String loadConfigFrontend() throws FileNotFoundException {
         Gson gson = new Gson();
         Configuration config = loadConfigSystem();
-        ServerSocketCLI.sendMessage("Loaded Configuration from config.json to frontend.");
         return gson.toJson(config);
     }
 
@@ -92,7 +83,6 @@ public class ConfigTasks {
         try (FileWriter writer = new FileWriter("config.json")) {
             Gson prettyGson = new GsonBuilder().setPrettyPrinting().create(); // For a nicely formatted JSON
             prettyGson.toJson(config, writer); // Serialize and write to file
-            System.out.println("JSON saved to config.json");
         } catch (IOException e) {
             System.err.println("Error saving JSON: " + e.getMessage());
         }

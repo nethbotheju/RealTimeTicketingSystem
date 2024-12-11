@@ -1,16 +1,19 @@
 package com.example.server;
 
-import com.example.server.config.DatabaseSetup;
-import com.example.server.config.LogConfig;
+import com.example.server.cli.ServerSocketCLI;
+import com.example.server.config.*;
+import com.example.server.logging.LogConfig;
 import com.example.server.model.*;
 
+import com.example.server.webSockets.LogController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.parser.ParseException;
 
 import java.io.FileNotFoundException;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 public class Main {
@@ -36,12 +39,13 @@ public class Main {
     private static ConfigVendor[] listOfVendors;
     private static ConfigCustomer[] listOfCustomers;
 
-    public static void main(String[] args) throws ParseException {
-    }
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS");
 
     public static String start() throws FileNotFoundException {
 
         config = ConfigTasks.loadConfigSystem();
+        ServerSocketCLI.sendMessage("Loaded Configuration from config.json to backend system.");
+        LogConfig.logger.info("Loaded Configuration from config.json to backend system.");
 
         maxTicketCapacity = config.getMaxTicketCapacity();
         totalNumberOfTickets = config.getTotalNumberOfTickets();
@@ -78,7 +82,10 @@ public class Main {
                 }
             }
 
-            ServerSocketCLI.sendMessage("The backend started successfully");
+        String message = "Program started Successfully";
+        logger.info(message);
+        ServerSocketCLI.sendMessage(message);
+        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
 
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
@@ -98,7 +105,6 @@ public class Main {
                 e.printStackTrace();
                 return "{}"; // Return empty JSON in case of an error
             }
-
     }
 
     public static String removeVendor(int vendorId) {
@@ -108,7 +114,7 @@ public class Main {
                 if (v.getVendorId() == vendorId) {
                     v.setIsVendorStopped(true);
 
-                    logger.info("Vendor " + vendorId + " successfully removed from the vendors list.");
+                    ServerSocketCLI.sendMessage("Vendor " + vendorId + " successfully removed from the vendors list.");
                     break;
                 }
             }
@@ -141,7 +147,7 @@ public class Main {
                 if (c.getCustomerId() == customerId) {
                     c.setIsCustomerStopped(true);
 
-                    logger.info("Customer " + customerId + " successfully stoped.");
+                    ServerSocketCLI.sendMessage("Customer " + customerId + " successfully removed from the customers list.");
                     break;
                 }
             }
@@ -174,9 +180,14 @@ public class Main {
             Thread thread = new Thread(vendor);
             vendors.add(vendor);
 
-            logger.info("Vendor " + newVendorId + " successfully added to the vendor list.");
+            String message = "Vendor " + newVendorId + " successfully added to the vendor list.";
+            logger.info(message);
+            LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
+
+            ServerSocketCLI.sendMessage("Vendor " + newVendorId + " successfully added to the vendors list.");
+
             numOfVendors = newVendorId;
-            thread.start(); // This will call the run() method.
+            thread.start();
 
             // Create an ObjectMapper to serialize the objects to JSON
             ObjectMapper objectMapper = new ObjectMapper();
@@ -206,7 +217,12 @@ public class Main {
             Thread thread = new Thread(customer);
             customers.add(customer);
 
-            logger.info("Customer " + newCustomerId + " successfully added to the customer list.");
+            String message = "Customer " + newCustomerId + " successfully added to the customer list.";
+            logger.info(message);
+            LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
+
+            ServerSocketCLI.sendMessage("Customer " + newCustomerId + " successfully removed from the customers list.");
+
             numOfCustomers = newCustomerId;
             thread.start(); // This will call the run() method.
 
@@ -233,8 +249,6 @@ public class Main {
     public static void stop() throws FileNotFoundException {
         isProgramStopped = true;
         isProgramStarted = false;
-        logger.info("Program stopped.");
-        logger.info("Total number of selled tickets. " + ticketPool.getTotalNumberOfTickets());
 
         // Update config with total tickets sold
         config.setTotalNumberOfTickets(ticketPool.getTotalBoughTickets());
@@ -262,17 +276,28 @@ public class Main {
         config.setListOfVendors(newVendorList);
 
         ConfigTasks.saveConfigSystem(config);
+        System.out.println("System Configuration saved to config.json");
+        LogConfig.logger.info("System Configuration saved to config.json");
 
         customers.clear();
         vendors.clear();
         config = null;
         ticketPool = null;
 
-        System.out.println("Stop method started");
+        String message = "Program stopped Successfully";
+        logger.info(message);
+        ServerSocketCLI.sendMessage(message);
+        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
     }
 
     public static void reset() throws FileNotFoundException {
         ConfigTasks.resetConfigSystem();
-        DatabaseSetup.deleteAllSales();
+        System.out.println("System Configuration saved to config.json");
+        LogConfig.logger.info("System Configuration saved to config.json");
+
+        String message = "Program rested Successfully";
+        logger.info(message);
+        ServerSocketCLI.sendMessage(message);
+        LogController.sendToFrontendLog(new LogEntry("Success", message, LocalDateTime.now().format(formatter)));
     }
 }

@@ -1,4 +1,4 @@
-package com.example.server.config;
+package com.example.server.logging;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;

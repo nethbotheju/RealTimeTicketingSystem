@@ -125,7 +125,7 @@ public class Main {
                             }
                         }
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        System.out.println("Error : " + e.getMessage());
                     }
                 }
             }).start();

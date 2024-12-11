@@ -1,10 +1,7 @@
 package com.example.server.model;
 
-import com.example.server.Main;
-import com.example.server.config.LogConfig;
-import com.example.server.controller.LogController;
+import com.example.server.logging.LogConfig;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
@@ -43,8 +40,6 @@ public class Customer implements Runnable {
                     }else{
                         Thread.currentThread().interrupt();
                     }
-
-
                 Thread.sleep(10000 / customerRetrivalRate); // customer ticket retrieval rate per second
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();

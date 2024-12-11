@@ -1,9 +1,8 @@
-package com.example.server.config;
+package com.example.server.database;
 
 
-import com.example.server.controller.SalesController;
+import com.example.server.webSockets.SalesController;
 import com.example.server.model.Sale;
-import com.google.gson.Gson;
 
 import java.sql.*;
 import java.util.ArrayList;

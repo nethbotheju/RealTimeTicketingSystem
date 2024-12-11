@@ -1,4 +1,4 @@
-package com.example.server.model;
+package com.example.server.config;
 
 public class Configuration {
     private int maxTicketCapacity;
