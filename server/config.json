@@ -9,12 +9,12 @@
     {
       "id": 1,
       "isStopped": false,
-      "releasedTickets": 6
+      "releasedTickets": 7
     },
     {
       "id": 2,
       "isStopped": false,
-      "releasedTickets": 7
+      "releasedTickets": 6
     },
     {
       "id": 3,

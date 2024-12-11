@@ -53,13 +53,14 @@ export class SalesChartComponent implements OnInit {
 
   parsedArray: Array<{ date: string; count: number }> = [];
 
-  constructor(
-    private salesWebSocket: SalesWebSocket,
-    private http: HttpClient
-  ) {}
+  constructor(private salesWebSocket: SalesWebSocket) {}
+
   chart: any;
 
   ngOnInit(): void {
+    if (typeof window == 'undefined') {
+      return;
+    }
     this.chart = new Chart('TicketSales', this.config);
     this.salesWebSocket.initialize();
     this.salesWebSocket.connect();
