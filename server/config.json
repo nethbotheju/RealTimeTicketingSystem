@@ -1,25 +1,20 @@
 {
   "maxTicketCapacity": 20,
-  "totalNumberOfTickets": 20,
+  "totalNumberOfTickets": 6,
   "ticketRetrivalRate": 2,
   "ticketReleaseRate": 2,
-  "numOfVendors": 3,
-  "numOfCustomers": 3,
+  "numOfVendors": 2,
+  "numOfCustomers": 2,
   "listOfVendors": [
     {
       "id": 1,
       "isStopped": false,
-      "releasedTickets": 7
+      "releasedTickets": 3
     },
     {
       "id": 2,
       "isStopped": false,
-      "releasedTickets": 6
-    },
-    {
-      "id": 3,
-      "isStopped": false,
-      "releasedTickets": 7
+      "releasedTickets": 3
     }
   ],
   "listOfCustomers": [
@@ -27,19 +22,13 @@
       "id": 1,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 6
+      "retrivalTickets": 3
     },
     {
       "id": 2,
       "priority": 3,
       "isStopped": false,
-      "retrivalTickets": 7
-    },
-    {
-      "id": 3,
-      "priority": 3,
-      "isStopped": false,
-      "retrivalTickets": 7
+      "retrivalTickets": 3
     }
   ]
 }

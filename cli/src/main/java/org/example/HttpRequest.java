@@ -22,10 +22,7 @@ public class HttpRequest {
         // Send the request and handle the response
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
-                .thenAccept(responseBody -> {
-                    // Process the response body
-                    System.out.println("Response: " + responseBody);
-                }).exceptionally(e -> {
+                .exceptionally(e -> {
                     System.err.println("Request failed: " + e.getMessage());
                     return null;
                 })
@@ -48,10 +45,7 @@ public class HttpRequest {
         // Send the request and handle the response
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
-                .thenAccept(responseBody -> {
-                    // Process the response body
-                    System.out.println("Response: " + responseBody);
-                }).exceptionally(e -> {
+                .exceptionally(e -> {
                     System.err.println("Request failed: " + e.getMessage());
                     return null;
                 })
@@ -76,7 +70,7 @@ public class HttpRequest {
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
                 .thenAccept(responseBody -> {
-                    System.out.println("Response: " + responseBody);
+                    System.out.println("\nResponse: " + responseBody);
                 }).exceptionally(e -> {
                     if(e.getCause() instanceof java.net.ConnectException){
                         System.out.println("\n Unable to connect to server. Make sure server is running.");

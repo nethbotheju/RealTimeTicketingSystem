@@ -98,7 +98,6 @@ public class Main {
                 // Convert the map to JSON
                 String jsonResult = objectMapper.writeValueAsString(resultMap);
 
-                System.out.println("Start method started with result: " + jsonResult);
                 return jsonResult; // Return the JSON string
 
             } catch (Exception e) {
@@ -276,8 +275,8 @@ public class Main {
         config.setListOfVendors(newVendorList);
 
         ConfigTasks.saveConfigSystem(config);
-        System.out.println("System Configuration saved to config.json");
         LogConfig.logger.info("System Configuration saved to config.json");
+        ServerSocketCLI.sendMessage("System Configuration saved to config.json");
 
         customers.clear();
         vendors.clear();

@@ -17,7 +17,12 @@ public class Main {
     public static void main(String[] args) {
         // Method for getting messages from the backend and saving
 
-        System.out.println("First input the Configuration Parameters");
+        System.out.println("\n*************************************************");
+        System.out.println("* Welcome to the Real Time Ticketing System CLI *");
+        System.out.println("*************************************************");
+
+        System.out.println("\n - Please input the required configuration parameters first.");
+        System.out.println("\n - Afterward, simply type the desired command and press Enter to execute it.");
 
         int maxTicketCapacity = 0;
         int totalTicketNumber = 0;
@@ -105,7 +110,7 @@ public class Main {
 
         try {
             socket = new Socket("localhost", 1234);
-            System.out.println("Connected to Backend server");
+            System.out.println("\nConnected to Backend server .....");
 
             new Thread(new Runnable() {
                 @Override
