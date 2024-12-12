@@ -65,3 +65,46 @@
     *   Locate the `Main.java` file.
     *   Right-click on this file and select "Run 'Main'".
     *   IntelliJ IDEA will automatically download any required dependencies (Maven dependencies) and start the Cli application in the Intellij IDEA terminal.
+
+
+> **IMPORTANT NOTICE**
+>   
+> **System Startup Sequence:** To ensure optimal performance and prevent unexpected behavior, it is crucial to initiate the system components in the following order:
+> 1.  **Frontend (GUI)**
+> 2.  **Backend**
+> 3.  **CLI**
+>     
+> Starting the components in any other order may result in errors or system malfunctions. Please adhere to this sequence for correct operation.
+
+
+# System Usage Instructions
+
+To ensure proper functionality, please initiate the system components in the following order: **CLI, Backend, Frontend**.
+
+### 1. CLI Configuration
+
+   *   Begin by navigating to the command-line interface (CLI).
+   *   The CLI will prompt you to enter the required configuration parameters. Please provide the necessary values to proceed.
+
+### 2. System Initialization
+
+   *   **After** completing the CLI configuration, you can start the system in one of two ways:
+   *   **GUI:** Use the "Start" button within the frontend graphical user interface (GUI).
+   *    **CLI:** Execute the command `start` within the CLI terminal.
+
+### 3. System Shutdown
+
+   *   To halt the system, you have two options:
+   *   **GUI:** Use the "Stop" button within the frontend GUI.
+   *    **CLI:** Execute the command `stop` within the CLI terminal.
+
+### 4. System Reset
+
+   *   To restore the system to its initial state, utilize the "Reset" button available within the frontend GUI.
+
+### 5. Configuration Parameter Updates
+
+   *   To modify the system's configuration parameters:
+   *   Navigate to the configuration form within the frontend GUI.
+   *    Update the desired parameters.
+   *    Submit the form to apply the changes. This will update the system with the new configuration.
